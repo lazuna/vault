@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+
+jobs:
+  lint-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        language: [python, node, typescript, bash, go, c, yaml, html, css]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up linters
+      run: |
+        sudo apt update
+        sudo apt install -y shellcheck clang-format yamllint golang
+
+    - name: Python Lint
+      if: matrix.language == 'python'
+      run: |
+        pip install black flake8
+        black --check .
+        flake8 .
+
+    - name: JavaScript/TypeScript Lint
+      if: matrix.language == 'node' || matrix.language == 'typescript'
+      run: |
+        npm install
+        npx eslint . --ext .js,.ts
+
+    - name: Bash Lint
+      if: matrix.language == 'bash'
+      run: shellcheck **/*.sh
+
+    - name: Golang Lint
+      if: matrix.language == 'go'
+      run: |
+        go install golang.org/x/lint/golint@latest
+        golint ./...
+
+    - name: Clang Format
+      if: matrix.language == 'c'
+      run: clang-format --dry-run --Werror **/*.{c,h}
+
+    - name: YAML Lint
+      if: matrix.language == 'yaml'
+      run: yamllint .
+
+    - name: HTML/CSS Lint
+      if: matrix.language == 'html' || matrix.language == 'css'
+      run: |
+        npm install -g htmlhint stylelint
+        htmlhint .
+        stylelint "**/*.css"
+
