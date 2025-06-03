@@ -1,0 +1,38 @@
+# Auto-labeling for issues (triggered by title/body matches)
+
+"area:notify":
+  - "(?i)notify"
+  - "(?i)alert"
+"area:edr":
+  - "(?i)edr"
+  - "(?i)detection"
+"area:ci":
+  - "(?i)ci/cd"
+  - "(?i)workflow"
+
+"area:infra":
+  - "(?i)scaffold"
+  - "(?i)infra"
+"area:maturity":
+  - "(?i)maturity"
+  - "(?i)scorecard"
+
+"type:policy":
+  - "(?i)policy"
+"type:strategy":
+  - "(?i)roadmap"
+  - "(?i)strategy"
+"type:reflection":
+  - "(?i)reflect"
+  - "(?i)introspect"
+"type:config":
+  - "(?i)config"
+  - "(?i)yml"
+
+"type:devx":
+  - "(?i)developer experience"
+  - "(?i)devx"
+"type:documentation":
+  - "(?i)readme"
+  - "(?i)docs"
+

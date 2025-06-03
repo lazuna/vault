@@ -1,0 +1,39 @@
+name: 🚨 Issue Linter
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+
+jobs:
+  validate-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for required fields
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = context.payload.issue.title;
+            const body = context.payload.issue.body;
+            const labels = context.payload.issue.labels.map(l => l.name);
+
+            const errors = [];
+
+            if (!title.match(/^(feat|fix|policy|docs|bug|strategy):\s/i)) {
+              errors.push("⚠️ Issue title must start with one of: feat:, fix:, policy:, docs:, strategy:");
+            }
+
+            if (!body || body.length < 30) {
+              errors.push("⚠️ Issue body is too short or empty.");
+            }
+
+            const hasType = labels.some(l => l.startsWith("type:"));
+            const hasArea = labels.some(l => l.startsWith("area:"));
+
+            if (!hasType || !hasArea) {
+              errors.push("⚠️ Issue must include both a `type:` and an `area:` label.");
+            }
+
+            if (errors.length > 0) {
+              core.setFailed(errors.join('\n'));
+            }
+
