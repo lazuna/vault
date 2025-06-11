@@ -1,0 +1,59 @@
+title: Vault Contribution Guide
+description: >
+  Guidelines and structure for contributing to the Vault repository — specifically around
+  the cheatsheets system, folder layout, and YAML conventions.
+
+tags: [contribution, vault, cheatsheets, structure, guidelines]
+
+updated: 2025-06-08
+
+structure:
+  root_dir: knowledge/cheatsheets/
+  categories:
+    - linux_system
+    - networking
+    - cloud_devops
+    - programming_automation
+    - threat_offense
+    - detection_response
+    - compliance_policies
+    - miscellaneous
+
+cheatsheet_format:
+  filename: kebab_or_snake_case.yaml
+  fields:
+    - title: string
+    - tags: list
+    - updated: ISO8601 date
+    - sections:
+        - title: string
+          entries:
+            - command: string (or conceptual label)
+              description: string
+              notes: optional string
+
+contribution_process:
+  - Fork the repository
+  - Create a feature branch: `feature/<category>/<cheatsheet-name>`
+  - Use the provided YAML template in `knowledge/cheatsheets/_template.yaml`
+  - Add your file to the correct folder as defined above
+  - Run `tools/validate_yaml.py` (if available) before committing
+  - Commit using:
+      format: feat(cheatsheets): add <cheatsheet-name>.yaml to <category>
+  - Submit PR with:
+      - Summary of changes
+      - Target folder and file
+      - Link to original issue (if any)
+      - Notes for reviewers
+
+reviewer_guidelines:
+  - Validate folder placement
+  - Confirm adherence to YAML schema
+  - Ensure clear, concise command descriptions
+  - Check for duplication across sheets
+
+automation_hooks:
+  - `_index.yaml` will be used to generate summary tables
+  - Future support for YAML to Markdown, JSON, and GitHub issues
+
+
