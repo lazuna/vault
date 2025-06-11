@@ -1,0 +1,24 @@
+title: AWS Security Essentials
+tags: [aws, cloud, security]
+updated: 2025-06-08
+sections:
+  - title: IAM
+    entries:
+      - command: aws iam list-users
+        description: List IAM users.
+      - command: aws iam list-policies
+        description: List IAM policies.
+
+  - title: CloudTrail
+    entries:
+      - command: aws cloudtrail describe-trails
+        description: List CloudTrail trails.
+      - command: aws cloudtrail lookup-events --lookup-attributes AttributeKey=Username,AttributeValue=user
+        description: Search CloudTrail events by user.
+
+  - title: S3 Security
+    entries:
+      - command: aws s3api get-bucket-acl --bucket my-bucket
+        description: Get S3 bucket ACL.
+      - command: aws s3api get-bucket-policy --bucket my-bucket
+        description: Get S3 bucket policy.

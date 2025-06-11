@@ -1,0 +1,25 @@
+title: Security Policy Basics
+tags: [policy, compliance, governance]
+updated: 2025-06-08
+sections:
+  - title: Policy Components
+    entries:
+      - component: Purpose
+        description: Explains the reason and scope of the policy.
+      - component: Roles and Responsibilities
+        description: Defines who is responsible for what.
+      - component: Policy Statements
+        description: Specific rules and controls.
+      - component: Enforcement
+        description: Consequences for policy violations.
+      - component: Review Cycle
+        description: Frequency and process for policy review.
+
+  - title: Types of Policies
+    entries:
+      - policy: Acceptable Use Policy (AUP)
+        description: Rules for acceptable use of IT resources.
+      - policy: Data Protection Policy
+        description: Guidelines for handling sensitive data.
+      - policy: Incident Response Policy
+        description: Procedures for handling security incidents.

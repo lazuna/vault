@@ -1,0 +1,17 @@
+title: Phishing Techniques
+tags: [phishing, social-engineering, offense]
+updated: 2025-06-08
+sections:
+  - title: Email Spoofing
+    entries:
+      - command: sendmail -f spoof@domain.com victim@target.com
+        description: Send email with spoofed sender address.
+      - command: phishing toolkit setup
+        description: Setup a phishing toolkit (generic).
+
+  - title: Link Obfuscation
+    entries:
+      - command: URL shortening services
+        description: Use to mask malicious links.
+      - command: HTML anchor tags with deceptive text
+        description: Hide true URL behind link text.

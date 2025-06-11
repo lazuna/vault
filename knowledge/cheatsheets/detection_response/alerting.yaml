@@ -1,0 +1,18 @@
+title: Alerting Basics
+tags: [detection, alerting, monitoring]
+updated: 2025-06-08
+sections:
+  - title: Syslog Alerting
+    entries:
+      - command: logger -p local0.notice "Test alert"
+        description: Send test alert to syslog.
+
+  - title: SIEM Alerting
+    entries:
+      - command: create alert condition with threshold in SIEM
+        description: Configure alert in SIEM console.
+
+  - title: PagerDuty CLI
+    entries:
+      - command: pd trigger --service SERVICE_ID --description "Incident triggered"
+        description: Trigger PagerDuty incident from CLI.

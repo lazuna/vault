@@ -1,0 +1,34 @@
+title: Vault Cheatsheets Index
+description: >
+  This directory contains security-focused cheat sheets structured by domain,
+  curated as part of a CISO-track public knowledge base. Each subfolder represents
+  a key functional or technical category aligned with real-world practices.
+
+tags: [vault, cheatsheets, toc, index]
+updated: 2025-06-08
+
+categories:
+  - id: linux_system
+    name: Linux and System
+    description: Linux usage, hardening, system operations, and log analysis.
+  - id: networking
+    name: Networking
+    description: Commands, firewalls, tunnels, and network forensic tools.
+  - id: cloud_devops
+    name: Cloud and DevOps
+    description: Cloud security, CLI tools, IaC hygiene and automation.
+  - id: programming_automation
+    name: Programming and Automation
+    description: Secure scripting, Git usage, CI/CD protection.
+  - id: threat_offense
+    name: Threat Intel and Offense
+    description: Recon, MITRE, YARA, OSINT, Red Team tooling.
+  - id: detection_response
+    name: Detection and Response
+    description: SIEM queries, threat hunting, memory forensics, alerting.
+  - id: compliance_policies
+    name: Compliance and Policy
+    description: Security policies, standards, and control frameworks.
+  - id: miscellaneous
+    name: Miscellaneous
+    description: Secure coding, encrypted communication, data exfil detection.

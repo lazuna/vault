@@ -1,0 +1,20 @@
+title: Automation Tools and Basics
+tags: [automation, scripting, tools]
+updated: 2025-06-08
+sections:
+  - title: Ansible
+    entries:
+      - command: ansible-playbook site.yml
+        description: Run Ansible playbook.
+
+  - title: Jenkins CLI
+    entries:
+      - command: java -jar jenkins-cli.jar -s http://jenkins server build job-name
+        description: Trigger Jenkins job from CLI.
+
+  - title: Cron Jobs
+    entries:
+      - command: crontab -l
+        description: List current user's cron jobs.
+      - command: crontab -e
+        description: Edit current user's cron jobs.

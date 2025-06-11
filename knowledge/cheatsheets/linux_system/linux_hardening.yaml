@@ -1,0 +1,24 @@
+title: Linux Hardening
+tags: [linux, security, hardening]
+updated: 2025-06-08
+sections:
+  - title: User and Authentication Hardening
+    entries:
+      - command: passwd -l root
+        description: Lock root account.
+      - command: chage -l username
+        description: View user password aging settings.
+
+  - title: Filesystem Hardening
+    entries:
+      - command: mount -o nodev,nosuid,noexec /tmp
+        description: Harden /tmp with mount options.
+      - command: find / -perm -4000
+        description: Find SUID binaries.
+
+  - title: Network Hardening
+    entries:
+      - command: sysctl -w net.ipv4.conf.all.rp_filter=1
+        description: Enable reverse path filtering.
+      - command: sysctl -w net.ipv4.tcp_syncookies=1
+        description: Enable TCP SYN cookies to prevent SYN flood attacks.

@@ -1,0 +1,25 @@
+title: Cloud CLI Tools
+tags: [cloud, cli, tools]
+updated: 2025-06-08
+sections:
+  - title: AWS CLI
+    entries:
+      - command: aws configure
+        description: Configure AWS CLI credentials.
+
+  - title: Azure CLI
+    entries:
+      - command: az login
+        description: Log in to Azure CLI.
+
+  - title: GCP CLI
+    entries:
+      - command: gcloud auth login
+        description: Log in to GCP CLI.
+
+  - title: Kubernetes CLI (kubectl)
+    entries:
+      - command: kubectl get pods --all-namespaces
+        description: List all pods in all namespaces.
+      - command: kubectl describe pod POD_NAME
+        description: Describe a pod.

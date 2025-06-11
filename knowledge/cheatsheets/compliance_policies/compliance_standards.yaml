@@ -1,0 +1,16 @@
+title: Compliance Standards Overview
+tags: [compliance, policy, standards]
+updated: 2025-06-08
+sections:
+  - title: Key Frameworks
+    entries:
+      - standard: GDPR
+        description: General Data Protection Regulation — EU data privacy law.
+      - standard: HIPAA
+        description: Health Insurance Portability and Accountability Act — US healthcare data protection.
+      - standard: PCI-DSS
+        description: Payment Card Industry Data Security Standard — protects cardholder data.
+      - standard: ISO 27001
+        description: International standard for information security management.
+      - standard: NIST CSF
+        description: Cybersecurity Framework by NIST for managing cybersecurity risk.
