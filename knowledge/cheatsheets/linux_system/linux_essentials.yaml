@@ -1,0 +1,30 @@
+title: Linux Essentials
+tags: [linux, sysadmin, basics, cli]
+updated: 2025-06-08
+sections:
+  - title: Files and Directories
+    entries:
+      - command: ls -la
+        description: List all files with detailed information.
+      - command: cd /path/to/dir
+        description: Change directory.
+      - command: cp source dest
+        description: Copy files or directories.
+      - command: mv source dest
+        description: Move or rename files.
+
+  - title: Users and Groups
+    entries:
+      - command: adduser username
+        description: Add a new user.
+      - command: passwd username
+        description: Set or change a user's password.
+      - command: usermod -aG group username
+        description: Add user to a group.
+
+  - title: Package Management (Debian)
+    entries:
+      - command: sudo apt update andand sudo apt upgrade
+        description: Update package lists and upgrade packages.
+      - command: sudo apt install package
+        description: Install a package.

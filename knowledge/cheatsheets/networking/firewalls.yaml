@@ -1,0 +1,17 @@
+title: Firewalls (iptables, nftables)
+tags: [linux, firewall, security]
+updated: 2025-06-08
+sections:
+  - title: iptables Basics
+    entries:
+      - command: iptables -L -v
+        description: List iptables rules with details.
+      - command: iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+        description: Allow incoming SSH traffic.
+
+  - title: nftables Basics
+    entries:
+      - command: nft list ruleset
+        description: Show full nftables ruleset.
+      - command: nft add rule ip filter input tcp dport 22 accept
+        description: Allow incoming SSH traffic with nftables.

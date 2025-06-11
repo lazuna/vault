@@ -1,0 +1,27 @@
+title: Bash Scripting Essentials
+tags: [bash, scripting, automation]
+updated: 2025-06-08
+sections:
+  - title: Basic Syntax
+    entries:
+      - command: echo "Hello, World!"
+        description: Print text to the console.
+      - command: for i in {1..5}; do echo $i; done
+        description: Loop from 1 to 5 and print each number.
+
+  - title: Variables and Conditions
+    entries:
+      - command: if [ "$var" == "value" ]; then echo "Match"; fi
+        description: Simple conditional check.
+      - command: var="test"
+        description: Define a variable.
+
+  - title: Functions
+    entries:
+      - command: |
+          function greet() {
+            echo "Hello $1"
+          }
+        description: Define a function with parameter.
+      - command: greet "Poracle"
+        description: Call the function.

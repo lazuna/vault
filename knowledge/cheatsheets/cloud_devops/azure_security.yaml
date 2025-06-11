@@ -1,0 +1,22 @@
+title: Azure Security Essentials
+tags: [azure, cloud, security]
+updated: 2025-06-08
+sections:
+  - title: Azure AD
+    entries:
+      - command: az ad user list
+        description: List Azure AD users.
+      - command: az ad group list
+        description: List Azure AD groups.
+
+  - title: Activity Logs
+    entries:
+      - command: az monitor activity-log list
+        description: Retrieve Azure activity logs.
+
+  - title: Storage Account Security
+    entries:
+      - command: az storage account show --name myaccount
+        description: Show storage account properties.
+      - command: az storage account network-rule list --account-name myaccount
+        description: Show storage account network rules.

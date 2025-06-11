@@ -1,0 +1,26 @@
+title: Filesystem Operations
+tags: [linux, filesystem, sysadmin]
+updated: 2025-06-08
+sections:
+  - title: File Permissions
+    entries:
+      - command: chmod 644 file
+        description: Set file permissions.
+      - command: chown user:group file
+        description: Change ownership.
+
+  - title: Filesystem Information
+    entries:
+      - command: lsblk
+        description: List block devices.
+      - command: df -T -h
+        description: Show filesystem type and usage.
+      - command: mount | column -t
+        description: Show mounted filesystems.
+
+  - title: Disk Usage
+    entries:
+      - command: du -sh /path/*
+        description: Show size of directories.
+      - command: ncdu
+        description: Interactive disk usage viewer.

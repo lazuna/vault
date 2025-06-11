@@ -1,0 +1,24 @@
+title: Python Basics
+tags: [python, scripting, programming]
+updated: 2025-06-08
+sections:
+  - title: Syntax and Print
+    entries:
+      - command: print("Hello, World!")
+        description: Print text.
+
+  - title: Variables and Data Types
+    entries:
+      - command: x = 10
+        description: Integer variable.
+      - command: name = "Poracle"
+        description: String variable.
+
+  - title: Functions
+    entries:
+      - command: |
+          def greet(name):
+              print(f"Hello, {name}")
+        description: Define a function.
+      - command: greet("Poracle")
+        description: Call function.

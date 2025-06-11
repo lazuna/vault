@@ -1,0 +1,22 @@
+title: Basic Networking Commands
+tags: [linux, networking, cli]
+updated: 2025-06-08
+sections:
+  - title: Interfaces
+    entries:
+      - command: ip a
+        description: Show network interfaces and addresses.
+      - command: ifconfig
+        description: Legacy tool to display interfaces.
+
+  - title: Routing
+    entries:
+      - command: ip route
+        description: Show current routing table.
+
+  - title: DNS
+    entries:
+      - command: dig example.com
+        description: Perform DNS lookup.
+      - command: nslookup example.com
+        description: Query DNS servers.

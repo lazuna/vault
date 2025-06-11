@@ -1,0 +1,17 @@
+title: Reconnaissance Tools
+tags: [recon, offensive, security]
+updated: 2025-06-08
+sections:
+  - title: Network Scanning
+    entries:
+      - command: nmap -sS -p 1-65535 target.com
+        description: TCP SYN scan all ports on target.
+      - command: masscan -p0-65535 target.com
+        description: Fast port scanning.
+
+  - title: DNS Enumeration
+    entries:
+      - command: dig axfr example.com @ns1.example.com
+        description: Zone transfer attempt.
+      - command: host -a example.com
+        description: Detailed DNS info.

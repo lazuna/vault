@@ -1,0 +1,68 @@
+title: Cheatsheets Structure Specification
+description: >
+  Canonical schema and organizational contract for the Vault repository's cheat sheet system.
+  This document defines how cheat sheets are categorized, described, tagged, and located
+  within the Vault knowledge base.
+
+tags: [vault, cheatsheets, structure, schema, toc]
+
+version: 1.0
+updated: 2025-06-08
+
+folders:
+  - name: linux_system
+    path: knowledge/cheatsheets/linux_system/
+    description: >
+      Cheat sheets focused on Linux usage, hardening, monitoring, log analysis,
+      and core system operations. These are foundational skills for defensive infrastructure.
+    tags: [linux, system, hardening, monitoring, filesystems, logs]
+
+  - name: networking
+    path: knowledge/cheatsheets/networking/
+    description: >
+      Cheat sheets for understanding and interacting with network environments.
+      Covers basic commands, packet-level debugging, firewalls, tunneling, and network forensics.
+    tags: [networking, forensics, firewalls, vpn, tunneling, tcpip]
+
+  - name: cloud_devops
+    path: knowledge/cheatsheets/cloud_devops/
+    description: >
+      Security-focused cheat sheets for cloud platforms (AWS, Azure, GCP),
+      DevOps practices, CLI tools, and secure Infrastructure as Code usage.
+    tags: [cloud, devops, aws, azure, gcp, iac, automation]
+
+  - name: programming_automation
+    path: knowledge/cheatsheets/programming_automation/
+    description: >
+      Secure coding, scripting, and automation patterns — Python, Bash,
+      Git hygiene, and CI/CD security practices used in defensive and development workflows.
+    tags: [programming, automation, python, bash, git, cicd, secure-coding]
+
+  - name: threat_offense
+    path: knowledge/cheatsheets/threat_offense/
+    description: >
+      Offensive and threat intelligence cheat sheets — includes OSINT,
+      MITRE ATT&CK, YARA, recon, phishing, and Red Team automation tooling.
+    tags: [threat-intel, offense, mitre, yara, osint, red-team, recon]
+
+  - name: detection_response
+    path: knowledge/cheatsheets/detection_response/
+    description: >
+      Detection engineering, alerting, threat hunting, memory forensics,
+      malware analysis, and SIEM-centric workflows for response teams.
+    tags: [detection, response, siem, incident-response, threat-hunting, forensics, malware]
+
+  - name: compliance_policies
+    path: knowledge/cheatsheets/compliance_policies/
+    description: >
+      Formal documentation and operational mapping of security policies, standards,
+      governance controls, compliance checklists, and internal risk guidelines.
+    tags: [compliance, governance, policy, standards, audit]
+
+  - name: miscellaneous
+    path: knowledge/cheatsheets/miscellaneous/
+    description: >
+      Domain-agnostic or cross-functional topics like secure communication,
+      secure coding checklists, anti-exfiltration patterns, and niche tools.
+    tags: [miscellaneous, secure-coding, communication, anti-exfil, cross-domain]
+

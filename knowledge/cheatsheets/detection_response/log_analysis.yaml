@@ -1,0 +1,22 @@
+title: Log Analysis Essentials
+tags: [detection, logs, security]
+updated: 2025-06-08
+sections:
+  - title: Linux Logs
+    entries:
+      - command: tail -f /var/log/syslog
+        description: Real-time system log monitoring.
+      - command: grep "ERROR" /var/log/auth.log
+        description: Search for authentication errors.
+
+  - title: Windows Event Logs
+    entries:
+      - command: Get-WinEvent -LogName Security -MaxEvents 100
+        description: Retrieve recent security events (PowerShell).
+      - command: wevtutil qe Security /q:"*[System[(Level=2)]]" /c:10 /f:text
+        description: Get last 10 critical events.
+
+  - title: SIEM Query
+    entries:
+      - command: index=security sourcetype=WinEventLog:Security EventCode=4625
+        description: Example Splunk query for failed logons.

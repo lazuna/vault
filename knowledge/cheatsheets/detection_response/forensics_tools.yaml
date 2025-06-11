@@ -1,0 +1,17 @@
+title: Forensics Tools
+tags: [forensics, detection, investigation]
+updated: 2025-06-08
+sections:
+  - title: Disk Imaging
+    entries:
+      - command: dd if=/dev/sda of=/mnt/usb/disk_image.img bs=4M status=progress
+        description: Create disk image with dd.
+      - command: FTK Imager
+        description: GUI forensic imaging tool.
+
+  - title: Timeline Analysis
+    entries:
+      - command: fls -m / -r disk_image.img > files.txt
+        description: List file metadata with Sleuth Kit.
+      - command: mactime -b files.txt -d > timeline.csv
+        description: Generate timeline from metadata.
