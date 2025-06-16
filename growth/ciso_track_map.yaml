@@ -1,0 +1,26 @@
+ciso_track_map:
+  title: "CISO Track Map"
+
+  trajectory:
+    - "Infra-first security, embedded within DevOps and automation scaffolds"
+    - "Detection and policy logic as code, maintained in a YAML-native format"
+    - "System maturity modeled via architecture, threat models, and versioned doctrine"
+    - "Zero markdown goal: fully structured, schema-driven security engineering"
+    - "Vault as a living system: modular, indexable, and CI-integrated"
+
+  amplify_signals:
+    - "Architectural thinking with automation-oriented control surfaces"
+    - "Strategic clarity: separating knowledge, maturity, and execution layers"
+    - "Risk reduction through linting, composability, and tooling"
+    - "Influence by precision, not noise — signal amplification via clarity"
+    - "Structured growth artifacts: YAML, contributors, changelogs, doctrines"
+    - "Security as design: not added on, but ***built in*** from first commit"
+
+  active_initiatives:
+    - "YAML-first migration from markdown"
+    - "CISO-grade meta and doctrine layer (`meta/`)"
+    - "Threat model library (`knowledge/threat-models/`) under active curation"
+    - "Cheatsheet grid, maturity model v1, and recon projects scaffolded"
+    - "GitHub best practices: commit style, PR hygiene, workflows defined"
+    - "Scripting toolkit: issue/label automation, scaffold tools, CI flows"
+

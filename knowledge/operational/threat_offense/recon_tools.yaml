@@ -1,0 +1,59 @@
+recon_tools:
+  version: "1.0"
+  context:
+    title: "Recon Tools – Subdomain and Asset Discovery"
+    description: >
+      Curated list of reconnaissance tools used for subdomain enumeration,
+      asset discovery, and surface mapping in offensive security workflows.
+    use_cases:
+      - asset enumeration
+      - subdomain mapping
+      - target surface expansion
+      - external recon automation
+
+  categories:
+    - id: subdomain_recon
+      name: "Subdomain Enumeration & Asset Discovery"
+      tools:
+        - name: Amass
+          url: "https://github.com/OWASP/Amass"
+          description: >
+            OWASP project for in-depth subdomain enumeration via passive, active, and bruteforce methods.
+          tags: [subdomains, reconnaissance, passive, active]
+
+        - name: subfinder
+          url: "https://github.com/projectdiscovery/subfinder"
+          description: >
+            Lightweight passive subdomain enumeration using public sources, part of ProjectDiscovery suite.
+          tags: [subdomains, passive, fast]
+
+        - name: assetfinder
+          url: "https://github.com/tomnomnom/assetfinder"
+          description: >
+            Tool by Tomnomnom to discover subdomains and associated assets using various services.
+          tags: [subdomains, quick, passive]
+
+        - name: dnsgen
+          url: "https://github.com/ProjectAnte/dnsgen"
+          description: >
+            Generate permutations of domain names for bruteforcing and DNS wordlist generation.
+          tags: [dns, fuzzing, bruteforce]
+
+        - name: shuffledns
+          url: "https://github.com/projectdiscovery/shuffledns"
+          description: >
+            Wrapper for massdns and dnsx to perform DNS resolution of large subdomain lists.
+          tags: [dns, resolution, bruteforce]
+
+        - name: httprobe
+          url: "https://github.com/tomnomnom/httprobe"
+          description: >
+            Probes for working HTTP and HTTPS servers on discovered subdomains or IPs.
+          tags: [http, probing, alive-check]
+
+        - name: aquatone
+          url: "https://github.com/michenriksen/aquatone"
+          description: >
+            Visual reconnaissance tool for domain targets. Captures screenshots of HTTP responses.
+          tags: [screenshots, recon, visual]
+

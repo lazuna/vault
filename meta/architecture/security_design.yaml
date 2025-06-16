@@ -1,0 +1,53 @@
+security_design:
+  version: "1.0"
+  context:
+    title: "Security by Design"
+    description: >
+      Foundational philosophy for engineering systems that secure themselves — 
+      not through reactive patchwork, but through intentional architecture, feedback loops, and trust boundaries.
+      This design lens aims for resilient defaults, context-aware enforcement, and minimal blast radius.
+
+  principles:
+    - name: "Signal Fidelity > Volume"
+      description: >
+        High-fidelity telemetry enables faster triage and reduces fatigue.
+        Design detection pipelines to prioritize precision over coverage.
+
+    - name: "Identity as the Perimeter"
+      description: >
+        Treat identity, authentication, and authorization as the core enforcement surface —
+        especially in cloud-native, API-driven, and ephemeral architectures.
+
+    - name: "Context-Aware Enforcement"
+      description: >
+        Controls must adapt based on workload, risk profile, user behavior, and environment.
+        Static policies age poorly — aim for policy engines that can reason dynamically.
+
+    - name: "Built-in Observability"
+      description: >
+        Instrumentation should be embedded at design time —
+        not bolted on post-deployment.
+        Every decision and control point should be observable, traceable, and measurable.
+
+    - name: "Principled Degradation"
+      description: >
+        Design for failure. Recovery, isolation, and fault containment must be first-class citizens.
+        Assume breach, assume loss, and ensure graceful fallback.
+
+    - name: "No Blind Trust"
+      description: >
+        Minimize implicit trust between services, users, and environments.
+        Leverage attestation, verification, and conditional access.
+
+  design_maxims:
+    - "A breach is often a design flaw that passed audit."
+    - "Every system is secure until someone asks it a new question."
+    - "What you can't observe, you can't defend."
+    - "The best control is the one that operates silently and correctly."
+
+  use_cases:
+    - architecture_review: "Embed in design checklists and security gates"
+    - detection_engineering: "Anchor detection logic to control objectives and signal integrity"
+    - threat_modeling: "Evaluate designs through abuse cases, failure modes, and misconfiguration paths"
+    - onboarding: "Used to align new engineers and architects with vault principles"
+

@@ -1,0 +1,108 @@
+nist_csf_reference:
+  version: "1.1"
+  context:
+    title: "NIST Cybersecurity Framework (CSF) Reference"
+    description: >
+      Structured mapping of NIST CSF core functions and categories, 
+      designed for integration into security capability models, audit planning,
+      policy mapping, and automated maturity tooling.
+    source: "https://www.nist.gov/cyberframework"
+    use_cases:
+      - control library structuring
+      - capability mapping
+      - maturity model alignment
+      - policy reference architecture
+      - audit baseline generation
+
+  core_functions:
+    - id: IDENTIFY
+      name: "Identify"
+      objective: >
+        Understand the organizational context, critical assets, and risk landscape
+        to manage cybersecurity risk to systems, assets, data, and capabilities.
+      categories:
+        - id: ID.AM
+          name: "Asset Management"
+          description: "Inventory of physical, software, cloud, data, and user assets"
+        - id: ID.BE
+          name: "Business Environment"
+          description: "Mission, objectives, roles, regulatory and operational context"
+        - id: ID.RA
+          name: "Risk Assessment"
+          description: "Threat and vulnerability analysis; likelihood and impact quantification"
+        - id: ID.RM
+          name: "Risk Management Strategy"
+          description: "Risk appetite, prioritization, and decision-making criteria"
+
+    - id: PROTECT
+      name: "Protect"
+      objective: >
+        Develop and implement appropriate safeguards to ensure delivery of critical infrastructure services.
+      categories:
+        - id: PR.AC
+          name: "Access Control"
+          description: "User identity lifecycle, MFA, session policies, privilege enforcement"
+        - id: PR.AT
+          name: "Awareness and Training"
+          description: "Security culture, phishing simulations, training programs"
+        - id: PR.DS
+          name: "Data Security"
+          description: "Classification, encryption, DLP, and secure handling practices"
+        - id: PR.MA
+          name: "Maintenance"
+          description: "Configuration updates, patching, and technical debt management"
+        - id: PR.PT
+          name: "Protective Technology"
+          description: "Endpoint protection, firewalls, segmentation, and trusted tooling"
+
+    - id: DETECT
+      name: "Detect"
+      objective: >
+        Define and implement activities to identify the occurrence of a cybersecurity event.
+      categories:
+        - id: DE.AE
+          name: "Anomalies and Events"
+          description: "Baseline deviation detection, incident indicators, and heuristics"
+        - id: DE.CM
+          name: "Security Continuous Monitoring"
+          description: "Telemetry ingestion, SIEM/EDR/UBA signals, alerting logic"
+        - id: DE.DP
+          name: "Detection Processes"
+          description: "Detection-as-code, signal tuning, and trigger thresholds"
+
+    - id: RESPOND
+      name: "Respond"
+      objective: >
+        Develop and implement appropriate activities to take action regarding a detected cybersecurity event.
+      categories:
+        - id: RS.RP
+          name: "Response Planning"
+          description: "Runbooks, tabletop exercises, and escalation flows"
+        - id: RS.CO
+          name: "Communications"
+          description: "Stakeholder notifications, compliance reports, coordination"
+        - id: RS.AN
+          name: "Analysis"
+          description: "Root cause identification, forensics, impact analysis"
+        - id: RS.MI
+          name: "Mitigation"
+          description: "Containment, eradication, and compensating control deployment"
+        - id: RS.IM
+          name: "Improvements"
+          description: "Post-mortems, response tuning, KPI-based refinements"
+
+    - id: RECOVER
+      name: "Recover"
+      objective: >
+        Maintain plans for resilience and restore capabilities or services impaired during incidents.
+      categories:
+        - id: RC.RP
+          name: "Recovery Planning"
+          description: "DR/BCP scenarios, restoration tests, fallback plans"
+        - id: RC.IM
+          name: "Improvements"
+          description: "Post-incident resilience upgrades, architectural fixes"
+        - id: RC.CO
+          name: "Communications"
+          description: "Reputation management, internal briefings, external trust recovery"
+

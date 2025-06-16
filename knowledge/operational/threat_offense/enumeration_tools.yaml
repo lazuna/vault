@@ -1,0 +1,34 @@
+enumeration_tools:
+  context: >
+    Recon and enumeration tools used for asset discovery, directory fuzzing, and parameter mining
+    during offensive security testing phases. Designed for automation-friendly workflows.
+
+  tools:
+    - name: nmap
+      url: https://nmap.org/download.html
+      description: Network mapper for port scanning, OS detection, and service enumeration
+
+    - name: ffuf
+      url: https://github.com/ffuf/ffuf
+      description: Fast web fuzzer for directory and resource discovery
+
+    - name: hakrawler
+      url: https://github.com/hakluke/hakrawler
+      description: Web crawler using go-colly, ideal for spidering JS-heavy web apps
+
+    - name: gau
+      url: https://github.com/lc/gau
+      description: Collect URLs from archive sources like Wayback Machine, Common Crawl
+
+    - name: paramspider
+      url: https://github.com/devanshbatham/ParamSpider
+      description: Scrapes parameter URLs for fuzzing and input-based testing
+
+    - name: arjun
+      url: https://github.com/s0md3v/Arjun
+      description: Finds HTTP parameters vulnerable to injection via active probing
+
+    - name: parameth
+      url: https://github.com/maK-/parameth
+      description: Hidden GET/POST parameter discovery using wordlists
+

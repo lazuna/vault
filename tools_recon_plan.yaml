@@ -1,0 +1,41 @@
+recon_offensive_tooling:
+  context: >
+    Index of tools, paths, and experimental labs for structured offensive reconnaissance.
+    Aligned to asset discovery, attack surface mapping, and tactical exploitation practice.
+
+  categories:
+    - title: Recon Tools
+      file: knowledge/tools/recon-tools.yaml
+      purpose: Core recon tools for target discovery, initial asset fingerprinting
+
+    - title: Enumeration / Crawling Tools
+      file: knowledge/tools/enumeration-tools.yaml
+      purpose: Automated endpoint enumeration, crawling for parameter and content discovery
+
+    - title: Manual Recon Tools
+      file: knowledge/tools/manual-recon-tools.yaml
+      purpose: Analyst-driven intelligence sources for exposed data, creds, and metadata
+
+    - title: XSS Tools
+      file: knowledge/tools/xss-tools.yaml
+      purpose: Detection and exploitation of XSS vulnerabilities in target applications
+
+    - title: SQL Injection Tools
+      file: knowledge/tools/sql-injection-tools.yaml
+      purpose: SQLi enumeration, exploitation, and automation frameworks
+
+  learning_path:
+    - title: Offensive Recon Learning Path
+      file: knowledge/learning-paths/offensive-recon.yaml
+      purpose: Structured curriculum for mastering asset discovery through exploit prep
+
+  progress_tracker:
+    - title: Learning Progress
+      file: growth/learning-progress.yaml
+      purpose: Tool-level progress tracker for offensive learning milestones
+
+  experiments:
+    - title: Recon Lab Project
+      file: projects/recon-lab/index.yaml
+      purpose: Hands-on lab to test recon workflows, scripts, and reporting methodology
+

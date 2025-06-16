@@ -1,0 +1,51 @@
+offensive_recon_learning_path:
+  title: "Offensive Recon & Testing – Structured Path"
+  context:
+    description: "Phased roadmap to build tactical recon and offensive testing capability."
+    vault_alignment:
+      - "Fully YAML-native: zero-markdown pipeline compliance"
+      - "Phase-aware tooling progression"
+      - "Feeds into growth tracking, recon-lab automation, and maturity models"
+
+  phases:
+    - stage: "Subdomain and Asset Discovery"
+      tools:
+        - "Amass"
+        - "subfinder"
+        - "assetfinder"
+        - "dnsgen"
+        - "shuffledns"
+        - "httprobe"
+        - "aquatone"
+
+    - stage: "Enumeration and Crawling"
+      tools:
+        - "nmap"
+        - "ffuf"
+        - "hakrawler"
+        - "gau"
+        - "paramspider"
+        - "arjun"
+        - "parameth"
+
+    - stage: "Manual Recon"
+      tools:
+        - "Shodan"
+        - "Censys"
+        - "Google Dorks"
+        - "Pastebin"
+        - "GitHub"
+
+    - stage: "Testing"
+      categories:
+        - name: "XSS Testing"
+          tools:
+            - "XSSHunter"
+            - "xsscrapy"
+            - "Dalfox"
+
+        - name: "SQL Injection Testing"
+          tools:
+            - "SQLMap"
+            - "waybackSQLiScanner"
+
