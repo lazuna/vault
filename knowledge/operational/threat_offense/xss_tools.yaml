@@ -1,0 +1,38 @@
+xss_tools:
+  version: "1.0"
+  context:
+    title: "Cross-Site Scripting (XSS) Tools"
+    description: >
+      Curated tools to detect, exploit, and manage XSS vulnerabilities across modern and legacy web applications.
+      Useful for automated scanning, blind XSS payload delivery, and real-time collaboration on findings.
+    use_cases:
+      - reflected/stored/blind XSS testing
+      - automated DOM payload discovery
+      - security training and red teaming
+      - bug bounty reconnaissance
+
+  categories:
+    - id: xss_detection
+      name: "XSS Discovery & Exploitation"
+      tools:
+        - name: XSSHunter
+          url: "https://xsshunter.com"
+          description: >
+            A blind XSS payload delivery and tracking tool for identifying out-of-band vulnerabilities in web apps.
+            Ideal for bug bounty hunting and production-safe testing scenarios.
+          tags: [xss, blind, payloads, oob, tracking]
+
+        - name: xsscrapy
+          url: "https://github.com/DanMcInerney/xsscrapy"
+          description: >
+            A fast, lightweight XSS scanner built on Scrapy. Good for crawling and detecting reflected/scriptable parameters.
+            Integrates well with recon pipelines and large-scale domain sweeps.
+          tags: [xss, scanner, scrapy, automation, reflected]
+
+        - name: Dalfox
+          url: "https://github.com/hahwul/dalfox"
+          description: >
+            A powerful XSS scanner focused on both scanning and payload analysis.
+            Includes support for DOM, parameter-based filtering, and can be used in CI pipelines.
+          tags: [xss, automation, dom, scanning, CI]
+

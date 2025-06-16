@@ -1,0 +1,31 @@
+sql_injection_tools:
+  version: "1.0"
+  context:
+    title: "SQL Injection Tools"
+    description: >
+      Curated tools for detecting and exploiting SQL injection vulnerabilities.
+      Suitable for manual testing, automated scanning, and payload crafting workflows.
+    use_cases:
+      - injection discovery
+      - automated exploitation
+      - payload tuning
+      - legacy app testing
+
+  categories:
+    - id: sql_injection
+      name: "SQL Injection Discovery & Exploitation"
+      tools:
+        - name: SQLMap
+          url: "https://github.com/sqlmapproject/sqlmap"
+          description: >
+            Powerful open-source tool that automates the process of detecting and exploiting SQL injection flaws.
+            Supports a wide range of databases, advanced fingerprinting, and DBMS-specific payloads.
+          tags: [sql, injection, automation, dbms, exploitation]
+
+        - name: waybackSQLiScanner
+          url: "https://github.com/ghostlulzhacks/waybackSqliScanner"
+          description: >
+            A scanner that uses Wayback Machine URLs to find potential SQLi parameters and test them.
+            Useful for historical input discovery and overlooked parameter auditing.
+          tags: [sql, injection, wayback, passive, fuzzing]
+

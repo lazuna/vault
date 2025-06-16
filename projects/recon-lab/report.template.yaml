@@ -1,0 +1,61 @@
+report_template:
+  version: "0.1"
+  context:
+    description: >
+      Standardized recon run report template for tracking discovery, validation, and findings
+      across automated and manual reconnaissance stages.
+
+  metadata:
+    date: "{{date}}"
+    domains: "{{domains}}"
+    operator: "{{operator}}"
+    run_id: "{{run_id}}"
+
+  summary:
+    - stage: "Subdomain Discovery"
+      result: "{{subdomain_count}} domains found"
+    - stage: "Alive Hosts"
+      result: "{{alive_host_count}} hosts alive"
+    - stage: "Nuclei Findings"
+      result: "{{nuclei_issue_count}} issues found"
+    - stage: "Manual Recon"
+      result: "{{manual_status}}"
+
+  findings:
+    subdomain_discovery:
+      file: "results/{{run_id}}/subfinder.txt"
+      notes: []
+
+    alive_hosts:
+      file: "results/{{run_id}}/alive.txt"
+      notes: []
+
+    nuclei_scan:
+      file: "results/{{run_id}}/nuclei_results.txt"
+      findings:
+        - severity: "High"
+          present: false
+        - severity: "Medium"
+          present: false
+        - severity: "Low"
+          present: false
+
+    manual_recon:
+      sources:
+        - source: "Shodan"
+          notes: ""
+        - source: "Censys"
+          notes: ""
+        - source: "GitHub"
+          notes: ""
+        - source: "Pastebin"
+          notes: ""
+
+  recommendations:
+    - "TBD based on findings"
+
+  next_steps:
+    - "Run extended scan"
+    - "Add nuclei templates"
+    - "Investigate manual findings"
+
