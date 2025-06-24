@@ -1,8 +1,9 @@
-title: Operational
+title: Learning-Paths
 description: Technical artifacts and documentation.
 tags:
 - vault
 - index
-- operational
+- learning-paths
 updated: '2025-06-25'
-contents: []
+contents:
+- offensive_recon.yaml

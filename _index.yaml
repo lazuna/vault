@@ -1,0 +1,14 @@
+title: Vault
+description: Technical artifacts and documentation.
+tags:
+- vault
+- index
+- vault
+updated: '2025-06-25'
+contents:
+- .pre-commit-config.yaml
+- .yamllint.yml
+- CHANGELOG.md
+- README.md
+- commitlint.config.js
+- tools_recon_plan.yaml
