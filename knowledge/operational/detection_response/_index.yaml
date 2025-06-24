@@ -1,0 +1,13 @@
+title: Detection Response
+description: Technical artifacts and documentation.
+tags:
+- vault
+- index
+- detection_response
+updated: '2025-06-25'
+contents:
+- alerting.yaml
+- forensics_tools.yaml
+- incident_response.yaml
+- log_analysis.yaml
+- malware_detection.yaml

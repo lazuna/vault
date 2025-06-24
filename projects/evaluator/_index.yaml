@@ -1,8 +1,11 @@
-title: Operational
+title: Evaluator
 description: Technical artifacts and documentation.
 tags:
 - vault
 - index
-- operational
+- evaluator
 updated: '2025-06-25'
-contents: []
+contents:
+- main.py
+- meta.yaml
+- sample.ts

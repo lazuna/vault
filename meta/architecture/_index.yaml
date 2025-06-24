@@ -1,0 +1,10 @@
+title: Architecture
+description: Technical artifacts and documentation.
+tags:
+- vault
+- index
+- architecture
+updated: '2025-06-25'
+contents:
+- operational_philosophy.yaml
+- security_design.yaml

@@ -1,8 +1,9 @@
-title: Operational
+title: Maturity Model
 description: Technical artifacts and documentation.
 tags:
 - vault
 - index
-- operational
+- maturity_model
 updated: '2025-06-25'
-contents: []
+contents:
+- v1.yaml

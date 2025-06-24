@@ -6,8 +6,10 @@ vault = Path("vault")
 
 files_to_create = {
     # Meta Doctrine
-    vault / "meta" / "doctrine" / "security_design.md":
-    """# Security by Design
+    vault
+    / "meta"
+    / "doctrine"
+    / "security_design.md": """# Security by Design
 
 A working philosophy of systems that secure themselves — through architecture, not patchwork.
 
@@ -19,9 +21,10 @@ A working philosophy of systems that secure themselves — through architecture,
 
 > "A breach is often a design flaw that passed audit."
 """,
-
-    vault / "meta" / "doctrine" / "operational_philosophy.md":
-    """# Operational Philosophy
+    vault
+    / "meta"
+    / "doctrine"
+    / "operational_philosophy.md": """# Operational Philosophy
 
 ## Quiet Wins
 Security maturity isn't loud — it's present in fewer alerts, calmer escalations, and predictable recoveries.
@@ -32,10 +35,10 @@ Security maturity isn't loud — it's present in fewer alerts, calmer escalation
 - Systems that learn and adapt
 
 """,
-
     # Personal Signal Mapping
-    vault / "growth" / "ciso_map.md":
-    """# CISO Map
+    vault
+    / "growth"
+    / "ciso_map.md": """# CISO Map
 
 ## Trajectory
 
@@ -49,10 +52,10 @@ Security maturity isn't loud — it's present in fewer alerts, calmer escalation
 - Influence without needing noise
 
 """,
-
     # Maturity Model
-    vault / "knowledge" / "maturity_model_v1.md":
-    """# Security Capability Maturity Model v1
+    vault
+    / "knowledge"
+    / "maturity_model_v1.md": """# Security Capability Maturity Model v1
 
 | Level | Capability Description |
 |-------|------------------------|
@@ -65,10 +68,11 @@ Security maturity isn't loud — it's present in fewer alerts, calmer escalation
 > Customize for Cloud, Infra, AppSec, GRC layers.
 
 """,
-
     # Evaluator project starter
-    vault / "projects" / "evaluator" / "README.md":
-    """# Evaluator
+    vault
+    / "projects"
+    / "evaluator"
+    / "README.md": """# Evaluator
 
 ### Mission:
 A system that **evaluates before it alerts**, reducing false positives and enforcing policy-as-code at the edge.
@@ -80,9 +84,10 @@ A system that **evaluates before it alerts**, reducing false positives and enfor
 - Notification router
 
 """,
-
-    vault / "projects" / "evaluator" / "main.py":
-    """# Entry point for Evaluator System
+    vault
+    / "projects"
+    / "evaluator"
+    / "main.py": """# Entry point for Evaluator System
 
 def evaluate_event(event):
     # Placeholder for event evaluation logic
@@ -91,7 +96,7 @@ def evaluate_event(event):
 if __name__ == "__main__":
     sample = {"event_type": "api_call", "source": "svc-auth"}
     print("Eval Result:", evaluate_event(sample))
-"""
+""",
 }
 
 # === EXECUTE CREATION ===
@@ -106,4 +111,3 @@ for path, content in files_to_create.items():
             print(f"⚠️ Already exists: {path}")
     except Exception as e:
         print(f"❌ Error creating {path}: {e}")
-

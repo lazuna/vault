@@ -1,8 +1,13 @@
-# .pre-commit-config.yaml (minimal for local formatting hygiene)
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+  - repo: https://github.com/psf/black
+    rev: 24.3.0
     hooks:
-      - id: trailing-whitespace
-      - id: end-of-file-fixer
+      - id: black
+        language_version: python3
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.2.0
+    hooks:
+      - id: flake8
+        args: ["--max-line-length=120"]
 

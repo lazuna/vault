@@ -1,0 +1,18 @@
+title: Threat Offense
+description: Threat intel, offensive tooling, and red-team notes.
+tags:
+- vault
+- index
+- threat_offense
+updated: '2025-06-25'
+contents:
+- enumeration_tools.yaml
+- exploitation_basics.yaml
+- malware_analysis.yaml
+- manual_recon_tools.yaml
+- phishing_techniques.yaml
+- recon_tools.yaml
+- reconnaissance_tools.yaml
+- sql_injection_tools.yaml
+- threat_intel_tools.yaml
+- xss_tools.yaml

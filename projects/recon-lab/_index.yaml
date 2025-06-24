@@ -1,0 +1,13 @@
+title: Recon-Lab
+description: Technical artifacts and documentation.
+tags:
+- vault
+- index
+- recon-lab
+updated: '2025-06-25'
+contents:
+- meta.yaml
+- recon_chain.py
+- recon_chain.sh
+- report.template.yaml
+- template.js
