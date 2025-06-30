@@ -1,0 +1,102 @@
+agents:
+  - name: ChatGPT
+    vendor: OpenAI
+    versions:
+      - version: GPT-4
+        updated: 2023-03
+        strengths:
+          - Solid reasoning
+          - Tool integration (via plugins)
+        weaknesses:
+          - Limited real-time data
+        ideal_use: Deep analysis, long-form content
+
+      - version: GPT-4o
+        updated: 2024-05
+        strengths:
+          - Unified tools, vision, audio
+          - Fast + low latency
+        weaknesses:
+          - UI-centric, not local-agent ready
+        ideal_use: Custom workflows, vision tasks
+
+  - name: Claude
+    vendor: Anthropic
+    versions:
+      - version: Claude 2
+        updated: 2023-07
+        strengths:
+          - Sensitive tone
+          - Large context window
+        weaknesses:
+          - Too cautious
+        ideal_use: Drafting, narrative-heavy compliance
+
+      - version: Claude 3 Opus
+        updated: 2024-03
+        strengths:
+          - 200K context
+          - Strong reasoning, more assertive
+        weaknesses:
+          - Still lacks plug-in/tool support
+        ideal_use: Threat modeling, long contextual threads
+
+  - name: Perplexity
+    vendor: Perplexity.ai
+    versions:
+      - version: Claude/GPT hybrid
+        updated: 2024-04
+        strengths:
+          - Fast, source-cited answers
+          - Good at factual synthesis
+        weaknesses:
+          - Weak on long-chain reasoning
+        ideal_use: Research, source comparison, fact-first intel
+
+  - name: Gemini
+    vendor: Google DeepMind
+    versions:
+      - version: Gemini 1.5 Pro
+        updated: 2024-06
+        strengths:
+          - Real-time web search
+          - Native Android integration
+        weaknesses:
+          - Unstable reasoning, vague responses
+        ideal_use: Mobile AI agent, quick lookups
+
+  - name: Ground.News
+    vendor: Ground
+    versions:
+      - version: GPT-driven backend
+        updated: 2024-01
+        strengths:
+          - News bias visualizer (left/center/right)
+        weaknesses:
+          - Narrow focus
+        ideal_use: Bias detection, disinfo correlation
+
+  - name: Grok
+    vendor: xAI (Elon Musk)
+    versions:
+      - version: Grok-1.5
+        updated: 2024-06
+        strengths:
+          - Real-time X (Twitter) context
+          - Sarcastic, informal tone
+        weaknesses:
+          - Limited to X, unclear reasoning quality
+        ideal_use: Cultural sentiment, fast-moving topics, meme analysis
+
+  - name: GitHub Copilot
+    vendor: Microsoft / OpenAI
+    versions:
+      - version: Copilot X (GPT-4-turbo)
+        updated: 2024-05
+        strengths:
+          - Inline code suggestions
+          - Chat-style dev assistant in IDEs
+        weaknesses:
+          - Not great at architecture or explaining logic
+        ideal_use: Code scaffolding, boilerplate generation, docstrings
+
