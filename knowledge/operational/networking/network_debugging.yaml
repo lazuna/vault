@@ -1,0 +1,24 @@
+title: Network Debugging and Forensics
+tags: [networking, debugging, forensics]
+updated: 2025-06-08
+sections:
+  - title: Packet Capture
+    entries:
+      - command: tcpdump -i eth0 port 80
+        description: Capture HTTP traffic on eth0.
+      - command: tshark -i eth0
+        description: Live packet capture with tshark.
+
+  - title: Connection Debugging
+    entries:
+      - command: curl -v http://example.com
+        description: Verbose HTTP request.
+      - command: nc -v example.com 80
+        description: Check TCP connectivity.
+
+  - title: Tracing Paths
+    entries:
+      - command: traceroute example.com
+        description: Trace network path.
+      - command: mtr example.com
+        description: Real-time network path analysis.

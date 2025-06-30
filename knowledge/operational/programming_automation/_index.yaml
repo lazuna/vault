@@ -1,0 +1,12 @@
+title: Programming Automation
+description: Technical artifacts and documentation.
+tags:
+- vault
+- index
+- programming_automation
+updated: '2025-06-25'
+contents:
+- automation_tools.yaml
+- bash_scripting.yaml
+- git_cli.yaml
+- python_basics.yaml

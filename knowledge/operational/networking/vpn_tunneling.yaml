@@ -1,0 +1,22 @@
+title: VPN and Tunneling Tools
+tags: [vpn, tunneling, privacy]
+updated: 2025-06-08
+sections:
+  - title: OpenVPN
+    entries:
+      - command: openvpn --config client.ovpn
+        description: Start OpenVPN client with config.
+
+  - title: WireGuard
+    entries:
+      - command: wg-quick up wg0
+        description: Bring up WireGuard interface.
+      - command: wg
+        description: Show WireGuard status.
+
+  - title: SSH Tunneling
+    entries:
+      - command: ssh -L 8080:localhost:80 user@remote
+        description: Forward local port 8080 to remote server's port 80.
+      - command: ssh -D 1080 user@remote
+        description: Dynamic SOCKS proxy via SSH.

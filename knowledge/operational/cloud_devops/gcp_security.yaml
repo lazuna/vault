@@ -1,0 +1,22 @@
+title: GCP Security Essentials
+tags: [gcp, cloud, security]
+updated: 2025-06-08
+sections:
+  - title: IAM
+    entries:
+      - command: gcloud iam service-accounts list
+        description: List service accounts.
+      - command: gcloud projects get-iam-policy PROJECT_ID
+        description: Get IAM policy for a project.
+
+  - title: Audit Logs
+    entries:
+      - command: gcloud logging read "resource.type=gce_instance"
+        description: Read audit logs for GCE instances.
+
+  - title: Storage Security
+    entries:
+      - command: gsutil iam get gs://my-bucket
+        description: Get IAM policy for GCS bucket.
+      - command: gsutil acl get gs://my-bucket
+        description: Get ACL for GCS bucket.

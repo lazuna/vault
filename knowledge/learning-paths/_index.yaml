@@ -1,0 +1,9 @@
+title: Learning-Paths
+description: Technical artifacts and documentation.
+tags:
+- vault
+- index
+- learning-paths
+updated: '2025-06-25'
+contents:
+- offensive_recon.yaml

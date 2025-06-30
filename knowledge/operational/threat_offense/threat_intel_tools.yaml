@@ -1,0 +1,17 @@
+title: Threat Intelligence Tools
+tags: [threat-intel, tools, offense]
+updated: 2025-06-08
+sections:
+  - title: OSINT Tools
+    entries:
+      - command: theharvester -d example.com -b google
+        description: Gather emails, hosts from search engines.
+      - command: spiderfoot -s example.com
+        description: OSINT automation framework.
+
+  - title: Malware Info
+    entries:
+      - command: virustotal-cli scan malware.bin
+        description: Scan file on VirusTotal.
+      - command: abuseipdb -ip 1.2.3.4
+        description: Check IP reputation.

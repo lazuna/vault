@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install flake8 black
+
+    - name: Format with Black
+      run: |
+        black ./projects ./tools --check --diff
+
+   - name: Lint with flake8
+      run: |
+        cat <<EOF > .flake8
+        [flake8]
+        max-line-length = 88
+        exclude = .git,__pycache__,.venv
+        EOF
+
+        flake8 ./projects ./tools

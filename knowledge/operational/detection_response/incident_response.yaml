@@ -1,0 +1,26 @@
+title: Incident Response Basics
+tags: [incident-response, detection, forensics]
+updated: 2025-06-08
+sections:
+  - title: Initial Investigation
+    entries:
+      - command: whoami
+        description: Identify current user.
+      - command: netstat -anp
+        description: List active connections with process info.
+      - command: ps aux --sort=-%mem | head -10
+        description: Top 10 processes by memory usage.
+
+  - title: Memory Dump
+    entries:
+      - command: sudo fmem -o memdump.raw
+        description: Capture raw memory dump (Linux).
+      - command: DumpIt.exe
+        description: Memory dump tool for Windows.
+
+  - title: File Integrity
+    entries:
+      - command: sha256sum /path/to/file
+        description: Compute SHA256 hash.
+      - command: tripwire --check
+        description: Run Tripwire integrity check.

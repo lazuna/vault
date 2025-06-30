@@ -1,0 +1,50 @@
+manual_recon_tools:
+  context: >
+    Tools and platforms for analyst-driven reconnaissance. These sources help analysts trace digital footprints,
+    uncover exposed assets, and correlate signals not easily captured by automation. Designed for depth over breadth.
+
+  tools:
+    - name: Shodan
+      url: https://www.shodan.io/
+      description: Search engine for internet-connected devices, used to discover exposed services
+
+    - name: Censys
+      url: https://censys.io/
+      description: Internet-wide scanner for certificates, ports, and service banners
+
+    - name: Google Dorks
+      url: https://www.google.com
+      description: Advanced search syntax to locate exposed data and misconfigured services
+
+    - name: Pastebin
+      url: https://pastebin.com/
+      description: Public text-sharing platform — often indexed for leaked data, credentials
+
+    - name: GitHub
+      url: https://github.com
+      description: Used to find accidentally published secrets, tokens, and infrastructure code
+
+    - name: Hunter.io
+      url: https://hunter.io/
+      description: Email and domain reconnaissance — extract emails and verify company footprint
+
+    - name: PublicWWW
+      url: https://publicwww.com/
+      description: Source code search engine — track technologies, analytics IDs, leaked keys
+
+    - name: IntelligenceX
+      url: https://intelx.io/
+      description: Deep search across breaches, darknet, WHOIS, and public data leaks
+
+    - name: GreyNoise Visualizer
+      url: https://viz.greynoise.io/
+      description: Contextual intelligence on IPs observed scanning the internet — attacker profiling
+
+    - name: FOFA
+      url: https://fofa.info/
+      description: Chinese-origin Shodan-like scanner indexing internet-exposed services and ports
+
+    - name: ONYPHE
+      url: https://www.onyphe.io/
+      description: Cyber defense search engine with threat intelligence and internet-wide scans
+

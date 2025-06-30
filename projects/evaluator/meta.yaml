@@ -1,0 +1,52 @@
+project:
+  name: "Evaluator"
+  version: "0.1"
+  status: "draft"
+  context:
+    mission: >
+      A system that evaluates before it alerts — minimizing false positives, enriching context,
+      and enforcing policy-as-code at the edge of detection and notification.
+
+    overview: >
+      Evaluator functions as a modular decision engine, subscribing to events, applying
+      declarative policy logic, and routing only validated signals through notification channels.
+      Designed for observability pipelines, security platforms, and ops automation.
+
+  modules:
+    - name: "Subscription Manager"
+      purpose: >
+        Handles dynamic subscriptions to event sources (e.g. alerts, logs, sensors).
+        Supports filtering, scoping, and source health checks.
+
+    - name: "Trigger Logic"
+      purpose: >
+        Core logic for when to evaluate policies. Supports debouncing, rate limits, and
+        temporal conditions (e.g. only escalate if repeated within x minutes).
+
+    - name: "Policy Evaluation Engine"
+      purpose: >
+        Declarative engine (YAML or Rego) that validates inputs against predefined rules.
+        Supports chaining, severity tuning, and contextual thresholds.
+
+    - name: "Notification Router"
+      purpose: >
+        Routes validated signals to downstream channels (Slack, email, PagerDuty, webhooks),
+        enriched with policy result and original context.
+
+  goals:
+    - "Reduce alert fatigue via upstream filtering and intelligent evaluation"
+    - "Enable security-as-code and observability-as-code principles"
+    - "Integrate easily with SIEM, EDR, and alert producers"
+    - "Enable dynamic routing based on context and severity"
+
+  design_considerations:
+    - "Edge-first: Designed to run close to source — as a service, container, or function"
+    - "Observable: Every decision point emits telemetry"
+    - "Auditable: Policies, overrides, and evaluations are fully traceable"
+    - "Composable: Modules operate independently, deploy as needed"
+
+  roadmap:
+    - phase_1: "MVP with static policy, manual subscription, and Slack output"
+    - phase_2: "Dynamic policy loading, debounce logic, and multi-channel router"
+    - phase_3: "UI dashboard, audit trail viewer, and team-based policy sets"
+

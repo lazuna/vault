@@ -1,0 +1,43 @@
+version: "v1.1"
+context:
+  title: "Security Capability Maturity Model"
+  description: >
+    Progressive security capability model defining levels of organizational maturity.
+    Designed to support assessment, benchmarking, and roadmap development across Cloud, Infrastructure, Application Security, and GRC.
+  use_cases:
+    - Maturity benchmarking
+    - Roadmap modeling and delta analysis
+    - Strategy evolution from ad hoc to governed states
+  format: "Levels 0–4, inspired by CMMI, extended for cybersecurity posture mapping"
+  visualization: 
+    compatible_with:
+      - radar_chart
+      - maturity_heatmap
+      - policy_diff_map
+
+levels:
+  - level: 0
+    title: "Undefined"
+    description: >
+      Security is ad hoc, undocumented, and reactive. No defined ownership or standards.
+
+  - level: 1
+    title: "Basic Policy"
+    description: >
+      Minimal controls exist, typically due to compliance pressure. Policies are drafted but enforcement is weak or manual.
+
+  - level: 2
+    title: "Reactive + Visible"
+    description: >
+      Teams react to incidents with visible security controls. Some monitoring, logs, and checklists are in place, but no proactive strategies.
+
+  - level: 3
+    title: "Proactive Automation"
+    description: >
+      Security is embedded into workflows. Automated detection, preventive controls, and IaC scanning are operational. Risk ownership is distributed.
+
+  - level: 4
+    title: "Adaptive & Governed"
+    description: >
+      Security evolves with threats. Feedback loops from incident learning, red teaming, and business risk inform continuous improvement. Governance is data-driven and systemic.
+

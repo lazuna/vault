@@ -1,0 +1,26 @@
+title: System Monitoring
+tags: [linux, monitoring, sysadmin]
+updated: 2025-06-08
+sections:
+  - title: Process Monitoring
+    entries:
+      - command: top
+        description: Display real-time process info.
+      - command: htop
+        description: Interactive process viewer.
+
+  - title: Disk and Filesystem Monitoring
+    entries:
+      - command: df -h
+        description: Show disk space usage.
+      - command: du -sh *
+        description: Show size of directories/files.
+
+  - title: Network Monitoring
+    entries:
+      - command: netstat -tuln
+        description: Show listening ports.
+      - command: ss -tuln
+        description: Modern alternative to netstat.
+      - command: iftop
+        description: Monitor network bandwidth usage.

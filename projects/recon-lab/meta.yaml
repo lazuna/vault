@@ -1,0 +1,79 @@
+project:
+  name: "Recon Lab"
+  version: "0.1"
+  status: "experimental"
+
+  context:
+    description: >
+      Experimental workspace for orchestrating offensive recon tooling pipelines.
+      Focuses on chaining asset discovery, enrichment, and templated vulnerability probing
+      into structured, repeatable workflows.
+
+    goal: >
+      Reduce manual recon overhead and unify tools into a composable pipeline that
+      outputs actionable intelligence and structured reports.
+
+  pipeline_stages:
+    - stage: "Asset Discovery"
+      tools:
+        - Amass
+        - subfinder
+        - assetfinder
+      purpose: >
+        Enumerate subdomains and DNS records to map the initial asset graph.
+
+    - stage: "DNS Permutation & Validation"
+      tools:
+        - shuffledns
+        - dnsgen
+        - massdns
+      purpose: >
+        Expand subdomain permutations and validate live targets efficiently.
+
+    - stage: "Alive Host Checking"
+      tools:
+        - httprobe
+        - httpx
+      purpose: >
+        Detect which discovered hosts are alive and serving web traffic.
+
+    - stage: "Content and JS Enumeration"
+      tools:
+        - gau
+        - hakrawler
+        - getJS
+      purpose: >
+        Crawl exposed JS files, endpoints, and web artifacts.
+
+    - stage: "Parameter & Surface Discovery"
+      tools:
+        - paramspider
+        - arjun
+        - waybackurls
+      purpose: >
+        Discover query parameters and endpoint variability for deeper testing.
+
+    - stage: "Templated Scanning"
+      tools:
+        - nuclei
+        - dalfox
+        - custom YAML templates
+      purpose: >
+        Apply logic-based and regex-based scans across collected endpoints.
+
+    - stage: "Reporting & Output"
+      output_format: ["markdown", "json", "yaml"]
+      purpose: >
+        Aggregate findings into structured reports, tagging criticality and tool source.
+
+  enhancements:
+    - "Introduce `recon.yml` to define pipeline runs"
+    - "Tag tool outputs by stage for provenance tracking"
+    - "Include severity classification in scan output"
+    - "Support modular dry runs and live runs"
+
+  future:
+    - phase_1: "Pipeline orchestration script (bash or python)"
+    - phase_2: "Live dashboard + alert routing"
+    - phase_3: "Recon-as-code config format (schema + runtime CLI)"
+

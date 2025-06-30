@@ -1,0 +1,40 @@
+learning_progress:
+  title: "Learning Progress – Offensive Recon & Analysis Toolkit"
+
+  context:
+    intent: "Track tool-level skill development under the evolving offensive-recon layer."
+    vault_alignment:
+      - "YAML-native documentation and status tracking"
+      - "Tool progress mapped to detection-readiness and system recon flows"
+      - "Designed to plug into CISO-track growth dashboards and meta-docs"
+    signals:
+      - "Operational familiarity with core tools"
+      - "Clarity of coverage across recon stages"
+      - "Systematic progress over scattered experimentation"
+
+  tools:
+    - name: "Amass"
+      stage: "Passive DNS + Subdomain Discovery"
+      status: "Not Started"
+      notes: "Pending contextual need; overlaps with Subfinder."
+
+    - name: "subfinder"
+      stage: "Passive Subdomain Enumeration"
+      status: "In Progress"
+      notes: "Used in early recon chains; part of recon-lab."
+
+    - name: "SQLMap"
+      stage: "Automated SQLi Exploitation"
+      status: "Practiced"
+      notes: "Integrated into recon-lab proof-of-concept."
+
+    - name: "XSSHunter"
+      stage: "XSS Payload Reporting and Tracking"
+      status: "Not Started"
+      notes: "Requires webhook integration and sandbox test."
+
+    - name: "..."
+      stage: ""
+      status: ""
+      notes: ""
+

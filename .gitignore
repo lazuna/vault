@@ -1,0 +1,60 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.venv/
+.env
+.env.*
+
+# === JavaScript / Node / TypeScript ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+
+# === Go ===
+*.exe
+*.test
+*.out
+
+# === Bash ===
+*.swp
+*.swo
+
+# === C/C++ (Clang) ===
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+*.out
+*.a
+
+# === Editor/IDE Junk ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+*.bak
+*.tmp
+*.log
+
+# === OS Files ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === Archive Files ===
+*.zip
+*.tar.gz
+*.tar
+*.rar
+
+# === Vault Output ===
+vault-foundation.zip
+

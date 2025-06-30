@@ -1,0 +1,13 @@
+blank_issues_enabled: false
+contact_links: []
+issue_templates:
+  - name: "🐞 Bug Report"
+    description: "Report a bug or unexpected behavior"
+    labels: ["bug", "triage-needed"]
+    file: bug_report.md
+
+  - name: "✨ Feature Request"
+    description: "Suggest a new idea or enhancement"
+    labels: ["enhancement"]
+    file: feature_request.md
+

@@ -1,0 +1,22 @@
+title: Logs and Log Analysis
+tags: [linux, logs, forensics, analysis]
+updated: 2025-06-08
+sections:
+  - title: System Logs
+    entries:
+      - command: journalctl -xe
+        description: Show recent systemd logs with details.
+      - command: tail -f /var/log/syslog
+        description: Live view syslog.
+
+  - title: Auth Logs
+    entries:
+      - command: tail -f /var/log/auth.log
+        description: Live view auth logs.
+
+  - title: Searching Logs
+    entries:
+      - command: grep 'keyword' /var/log/syslog
+        description: Search logs for a keyword.
+      - command: zgrep 'keyword' /var/log/syslog.*
+        description: Search compressed logs.

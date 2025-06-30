@@ -1,0 +1,28 @@
+title: Git CLI Essentials
+tags: [git, version-control]
+updated: 2025-06-08
+sections:
+  - title: Repository Setup
+    entries:
+      - command: git init
+        description: Initialize a new Git repository.
+      - command: git clone https://github.com/user/repo.git
+        description: Clone a remote repository.
+
+  - title: Common Commands
+    entries:
+      - command: git status
+        description: Show status of changes.
+      - command: git add file.txt
+        description: Stage file for commit.
+      - command: git commit -m "message"
+        description: Commit staged changes.
+      - command: git push origin main
+        description: Push commits to remote branch.
+
+  - title: Branching
+    entries:
+      - command: git checkout -b feature-branch
+        description: Create and switch to new branch.
+      - command: git merge feature-branch
+        description: Merge branch into current.

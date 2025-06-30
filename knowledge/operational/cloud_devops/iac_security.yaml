@@ -1,0 +1,24 @@
+title: IaC Security (Terraform, CloudFormation)
+tags: [iac, terraform, cloudformation, security]
+updated: 2025-06-08
+sections:
+  - title: Terraform Security
+    entries:
+      - command: tfsec .
+        description: Run tfsec static analysis on Terraform code.
+      - command: terraform validate
+        description: Validate Terraform code.
+
+  - title: CloudFormation Security
+    entries:
+      - command: cfn-lint template.yaml
+        description: Lint CloudFormation template.
+      - command: aws cloudformation validate-template --template-body file://template.yaml
+        description: Validate CloudFormation template.
+
+  - title: General IaC Tools
+    entries:
+      - command: checkov -d .
+        description: Run Checkov on IaC directory.
+      - command: terrascan scan -d .
+        description: Run Terrascan on IaC directory.
