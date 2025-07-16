@@ -1,0 +1,70 @@
+title: Vector Primer for Post-Quantum Cryptography
+tags: [cryptography, linear_algebra, pqc, vaultdrop]
+summary: >
+  Before you touch lattice encryption or post-quantum cryptography, 
+  you must master the vector space they live in. 
+  This primer teaches the essential concepts through examples and visual analogies.
+
+sections:
+  - concept: Vector
+    definition: A quantity with both direction and magnitude in space.
+    example: [3, 7, 1]
+
+  - concept: 2D Vector Examples
+    vectors:
+      a: [3, 4]
+      b: [-2, -6]
+    description: Represented on a Cartesian graph; direction and length matter.
+
+  - concept: Magnitude
+    formula: ||a|| = √(a₁² + a₂²)
+    note: Represents the "length" or size of a vector.
+
+  - concept: Scaling
+    description: Multiply a vector by a scalar to stretch or shrink its size.
+    example: 2a = [6, 8]
+
+  - concept: Normalization
+    description: Rescale the vector so its magnitude becomes 1 (unit vector).
+
+  - concept: Addition
+    example: a + b = [2, -2]
+    description: Vector addition combines direction and magnitude.
+
+  - concept: Transpose
+    description: Convert between column and row vector formats.
+    notation: aᵗ
+
+  - concept: Inner Product (Dot Product)
+    formula: a·b = a₁b₁ + a₂b₂ + ... + aₙbₙ
+    example:
+      a: [3, 4]
+      b: [1, 3]
+      result: (3×1) + (4×3) = 15
+    note: Measures angle-related similarity; used in cryptographic projections.
+
+  - concept: Orthonormal Basis
+    definition: A set of unit-length vectors that are all perpendicular to each other.
+    example:
+      x: 3×[1, 0] + 4×[0, 1] = [3, 4]
+
+  - concept: Linear Independence
+    definition: A vector is independent if it cannot be written as a combination of others.
+    example:
+      independent_vectors:
+        - [1, 0]
+        - [0, 1]
+      note: These span the entire 2D space.
+
+resources:
+  - type: video
+    title: "3Blue1Brown: Essence of Linear Algebra"
+    url: "https://www.youtube.com/playlist?list=PLSQl0a2vh4HDd5usQYtFypYcZP9ruum90"
+
+  - type: paper
+    title: "Why Lattices Matter in PQC"
+    url: "https://pqcrypto.org/docs/lattices.pdf"
+
+  - type: authority
+    title: "IBM Quantum: Research into Lattice-Based PQC"
+    url: "https://research.ibm.com/blog/quantum-safe-cryptography"

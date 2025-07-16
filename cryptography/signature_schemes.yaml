@@ -1,0 +1,72 @@
+title: Post-Quantum Signature Schemes
+tags: [pqc, signatures, cryptography, dilithium, falcon, sphincs, vaultdrop]
+summary: >
+  A comparison of leading post-quantum digital signature schemes 
+  selected or shortlisted by NIST, 
+  including Dilithium, Falcon, and SPHINCS+. Highlights differences in 
+  design, performance, and deployment implications.
+
+schemes:
+  - name: Dilithium
+    type: Lattice-based
+    basis: Module-LWE, Module-SIS
+    status: NIST Standardized (Primary)
+    key_size: ~1.3 KB
+    signature_size: ~2.7 KB
+    speed: Fast
+    traits:
+      - Stateless
+      - Easy to implement securely
+      - Resistant to side-channel attacks
+    notes: >
+      Chosen for balance across performance, simplicity, and 
+      robustness. IBM contributed to CRYSTALS-Dilithium.
+
+  - name: Falcon
+    type: Lattice-based
+    basis: NTRU lattice, Gaussian sampling
+    status: NIST Alternate Finalist
+    key_size: ~0.9 KB
+    signature_size: ~666 bytes
+    speed: Fast (in theory)
+    traits:
+      - Compact signatures
+      - Mathematically elegant
+      - Requires high-precision floating-point operations
+    risks:
+      - Fragile implementation
+      - Susceptible to timing attacks if mishandled
+    notes: >
+      Ideal for bandwidth-constrained systems, but implementers must 
+      tread carefully.
+
+  - name: SPHINCS+
+    type: Hash-based
+    basis: Winternitz One-Time Signatures + Merkle trees
+    status: NIST Standardized (Alternate)
+    key_size: ~32 KB
+    signature_size: 8–17 KB
+    speed: Slow
+    traits:
+      - Stateless
+      - No reliance on algebraic structures
+      - Quantum-resistant by construction
+    notes: >
+      Considered a conservative fallback if lattice assumptions break. 
+      Secure but large and slow.
+
+use_cases:
+  - Application signing
+  - Secure boot processes
+  - Certificate authorities
+  - Long-term integrity (archives, logs)
+
+resources:
+  - title: NIST PQC Signature Finalists
+    url: https://csrc.nist.gov/projects/post-quantum-cryptography/selected-algorithms-2022
+
+  - title: IBM Research on CRYSTALS
+    url: https://research.ibm.com/blog/quantum-safe-cryptography
+
+  - title: PQCrypto School - Lattice Signatures
+    url: https://pqcrypto.eu.org/school2021/

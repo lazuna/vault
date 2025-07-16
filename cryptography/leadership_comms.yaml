@@ -1,0 +1,81 @@
+title: Post-Quantum Cryptography – Boardroom Messaging Guide
+tags: [pqc, ciso, board, leadership, communication, vaultdrop]
+summary: >
+  A guide for translating post-quantum cryptographic risks and 
+  readiness into language suitable for executive leadership and board 
+  presentations.
+
+themes:
+  - theme: Trust, Not Math
+    explanation: >
+      Emphasize business continuity, cryptographic agility, and long-
+      term resilience — not technical algorithms.
+    example: >
+      “Quantum computers threaten the trust layer of our systems — not 
+      just how we encrypt, but how we prove integrity.”
+
+  - theme: Signature Fragility
+    explanation: >
+      Stress that digital signatures (used in firmware, software 
+      updates, logs, contracts) are more vulnerable than encryption.
+    talking_point: >
+      “If an attacker breaks our signatures, they can impersonate 
+      updates and data authenticity — even if they can’t read our 
+      traffic.”
+
+  - theme: Lifespan Risk
+    explanation: >
+      Focus on data that must remain secure for years to decades.
+    example_assets:
+      - Root certificates
+      - Long-lived audit logs
+      - Firmware updates
+      - Legal documents / contracts
+    board_quote: >
+      “If someone decrypts our audit logs in 2030, we can’t go back in 
+      time and resecure them.”
+
+  - theme: Crypto Agility as a KPI
+    explanation: >
+      Make agility measurable — how fast can we rotate keys, update 
+      algorithms, or support hybrid schemes?
+    board_prompt: >
+      “If NIST updates standards tomorrow, how long would it take us 
+      to comply?”
+
+  - theme: Industry Validation
+    explanation: >
+      Use respected players as proof this isn’t fringe tech.
+    companies:
+      - IBM: Co-developed CRYSTALS-Kyber/Dilithium, deployed PQ TLS
+      - Google: Chrome supports hybrid PQ handshakes
+      - Cloudflare: PQ TLS pilot with Kyber and SIKE
+      - Microsoft: PQC red team research and hybrid DNS tests
+
+  - theme: Regulation and Readiness
+    explanation: >
+      Point to draft mandates and compliance roadmaps.
+    references:
+      - NSA requirements (2035 target)
+      - NIST SP 800-208
+      - EU ENISA PQ readiness research
+
+framework_mappings:
+  - NIST CSF 2.0: ID.GV, PR.AC, RC.IM
+  - CIS Controls v8: 4.7, 14.5, 16.13
+
+resources:
+  - title: IBM Research on Post-Quantum Trust
+    url: https://research.ibm.com/blog/quantum-safe-cryptography
+
+  - title: CISA Quantum-Readiness Fact Sheet
+    url: https://www.cisa.gov/sites/default/files/publications/CISA_FactSheet_Post-Quantum_Cryptography_508c.pdf
+
+  - title: Google Chrome PQC Announcement
+    url: https://www.chromium.org/Home/chromium-security/pqc/
+
+  - title: Cloudflare PQC Blog Series
+    url: https://blog.cloudflare.com/tag/post-quantum/
+
+  - title: Microsoft Research on Attacking PQ TLS
+    url: https://www.microsoft.com/en-us/research/publication/attacking-post-quantum-tls/

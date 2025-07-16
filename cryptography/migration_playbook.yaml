@@ -1,0 +1,73 @@
+title: Post-Quantum Migration Playbook
+tags: [pqc, migration, cryptography, cisostrategy, vaultdrop]
+summary: >
+  A practical guide to migrating cryptographic systems to post-quantum 
+  readiness. Includes phased actions, priority zones, and hybrid 
+  deployment paths, aligned with NIST and CIS frameworks.
+
+phases:
+  - phase: Inventory
+    description: >
+      Map every system that uses cryptography, explicitly or 
+      implicitly.
+    actions:
+      - Identify TLS endpoints, VPNs, email, SSH, internal PKI.
+      - Scan binaries for embedded crypto libraries.
+      - Include backup systems, CI/CD pipelines, firmware signing.
+
+  - phase: Classification
+    description: >
+      Group assets by sensitivity and long-term value.
+    actions:
+      - Tag each item with lifespan: short (<2y), medium (2–10y), long-term (>10y).
+      - Prioritize high-integrity zones: firmware, root certs, logs, digital ledgers.
+      - Apply quantum-impact score: what happens if this is decrypted in 10 years?
+
+  - phase: Crypto Agility
+    description: >
+      Implement systems that can swap crypto without total redesign.
+    actions:
+      - Design interfaces that support algorithm abstraction.
+      - Pilot hybrid schemes (e.g., classical + Kyber/Dilithium).
+      - Ensure you can rotate keys/algos without downtime.
+
+  - phase: Migration Readiness
+    description: >
+      Phase in PQC without breaking existing trust chains.
+    actions:
+      - Test post-quantum TLS (e.g., Kyber+X25519 hybrids).
+      - Start with internal services or low-risk comms.
+      - Engage with vendors on their PQC roadmaps.
+
+  - phase: Signature Focus
+    description: >
+      Migrate digital signatures before encryption.
+    rationale: >
+      Quantum attacks break signatures faster than encryption.
+    actions:
+      - Upgrade firmware signing, software updates, internal audit logs.
+      - Begin testing with Dilithium or Falcon.
+
+controls_mapping:
+  - framework: NIST CSF 2.0
+    relevant_functions:
+      - ID.AM: Asset Management
+      - PR.AC: Identity Management and Access Control
+      - DE.CM: Detection and Monitoring
+      - RC.IM: Improvements and Tech Debt Mitigation
+
+  - framework: CIS Controls v8
+    relevant_controls:
+      - 3.4: Secure Configurations for Hardware and Software
+      - 4.3: Manage Access Based on Need
+      - 16.13: Validate Crypto Agility
+
+resources:
+  - title: NIST Migration Guidance (SP 800-208)
+    url: https://csrc.nist.gov/publications/detail/sp/800-208/final
+
+  - title: IBM PQ TLS Pilot
+    url: https://research.ibm.com/blog/quantum-safe-cryptography
+
+  - title: NSA Quantum-Resistant Algorithm Requirements
+    url: https://media.defense.gov/2022/Sep/21/2003084066/-1/-1/0/CSI-POST-QUANTUM-CYBERSECURITY.PDF
