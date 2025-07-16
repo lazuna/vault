@@ -1,0 +1,82 @@
+title: Quantum Threat Simulation Framework
+tags: [pqc, redteam, simulation, cryptography, vaultdrop]
+summary: >
+  A structured set of post-quantum threat simulations for red and blue 
+  teams. These tests help security teams validate system resilience, 
+  visibility, and failover in hybrid PQC environments.
+
+simulations:
+
+  - name: TLS Downgrade to Classical
+    description: >
+      Simulate a client or intermediary forcing a downgrade from 
+      PQC+classical hybrid mode to classical-only key exchange (e.g., X25519 only).
+    purpose: >
+      Test whether systems can detect, log, and prevent silent downgrade.
+    detection_checklist:
+      - Cert negotiation trace logs
+      - Fallback alerts in SIEM
+      - Unexpected cipher suite selection
+
+  - name: Malformed Ciphertext Injection (Kyber)
+    description: >
+      Send corrupted or oversized Kyber ciphertexts to the key 
+      decapsulation interface.
+    outcomes:
+      - Graceful error? Crash? Silent failure?
+      - Logging of invalid PQ traffic?
+    mitigation_checklist:
+      - Input validation in PQC library
+      - Try-catch boundary at encapsulation/decryption layer
+
+  - name: Oversized Signature Flood (Dilithium)
+    description: >
+      Inject signatures slightly above the expected size to test 
+      parsing and boundary enforcement.
+    purpose:
+      Identify parsing edge cases and performance degradation.
+    detection_checklist:
+      - Signature size range alerts
+      - Excessive error logs on signature verification
+
+  - name: Time Budget Exploit (Falcon)
+    description: >
+      Send high-volume Falcon signatures under load to trigger high-
+      precision math slowdowns.
+    outcomes:
+      - Latency spikes
+      - Missed service health alerts
+    mitigation_checklist:
+      - CPU budget profiling
+      - Application-level timeout handling
+
+  - name: Certificate Mismatch Attack
+    description: >
+      Present certificates with PQC algorithms that don't match the 
+      expected profiles or chains.
+    purpose: >
+      Test CA path validation logic under hybrid confusion.
+    red_flags:
+      - Cert accepted without PQ algorithm enforcement
+      - TLS stack fallback to legacy cert path silently
+
+  - name: Hybrid Handshake Manipulation (MITM)
+    description: >
+      Attempt man-in-the-middle manipulation of PQ payloads in hybrid 
+      TLS handshakes.
+    outcomes:
+      - Downgrade attack resilience
+      - Unexpected cert/key mismatch detection
+    detection_checklist:
+      - PQ cert fingerprint mismatch
+      - Session negotiation path anomaly
+
+resources:
+  - title: Open Quantum Safe TLS Interop Logs
+    url: https://openquantumsafe.org/
+
+  - title: NIST PQC Testing and Validation Guidelines
+    url: https://csrc.nist.gov/publications/detail/sp/800-208/final
+
+  - title: Post-Quantum Attack Simulation (Microsoft Research)
+    url: https://www.microsoft.com/en-us/research/publication/attacking-post-quantum-tls/

@@ -1,0 +1,64 @@
+title: Post-Quantum Testing, Audit, and Monitoring Guide
+tags: [pqc, testing, audit, observability, cryptography, vaultdrop]
+summary: >
+  This YAML drop outlines a structured approach for testing, logging, 
+  and auditing post-quantum cryptographic systems. 
+  Covers hybrid deployments, failure modes, SIEM integration, and 
+  compliance visibility.
+
+sections:
+  - category: PQC Algorithm Behavior Testing
+    goals:
+      - Ensure deterministic and safe behavior across edge cases.
+      - Validate hybrid fallback integrity.
+    practices:
+      - Run stress tests on keygen, encryption, and decryption under high load.
+      - Simulate rejection sampling failures (e.g., Dilithium).
+      - Confirm hybrid mode fallbacks work without downgrade attacks.
+      - Validate signature verification timing consistency.
+
+  - category: Logging & Telemetry
+    goals:
+      - Make PQC activity observable in production systems.
+      - Capture cryptographic state transitions.
+    logging_fields:
+      - algorithm: e.g., kyber768, dilithium3
+      - key_size: bits
+      - signature_size: bytes
+      - success/failure_reason: e.g., timeout, malformed_signature
+      - hybrid_mode: true/false
+      - cert_negotiation_trace: [classical_algos, pqc_algos, selected]
+    tools:
+      - instrument Open Quantum Safe libraries
+      - export logs to SIEM or EDR pipeline
+
+  - category: Threat Detection & SIEM Integration
+    objectives:
+      - Extend detection logic to PQC-aware workflows.
+    detection_rules:
+      - Alert on invalid PQC handshake attempts.
+      - Flag excessive PQC negotiation failures (possible downgrade or DoS).
+      - Detect malformed PQC traffic with invalid key exchange payloads.
+    SIEM_hooks:
+      - Custom parser for hybrid TLS logs
+      - Timeline correlation between key negotiation and failure
+
+  - category: Audit & Compliance
+    goals:
+      - Establish traceability for PQC operations.
+      - Provide regulators and auditors with defensible logs.
+    artifacts:
+      - Log every key negotiation attempt (classical + PQC).
+      - Timestamped signature generation + verification events.
+      - Algorithm version control (e.g., Dilithium2 vs Dilithium3)
+      - Backup records of all cryptographic policy changes
+
+resources:
+  - title: Open Quantum Safe Project (IBM + Industry)
+    url: https://openquantumsafe.org
+
+  - title: NIST PQC Testing Guidance
+    url: https://csrc.nist.gov/projects/post-quantum-cryptography/testing
+
+  - title: PQC Telemetry Patterns (Cloudflare/Meta)
+    url: https://blog.cloudflare.com/the-tls-post-quantum-experiment/

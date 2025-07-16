@@ -1,0 +1,71 @@
+title: LWE to Kyber - The Future of Encryption
+tags: [pqc, kyber, lwe, cryptography, encryption, vaultdrop]
+summary: >
+  Kyber is the post-quantum encryption scheme based on the hardness of 
+  Learning With Errors (LWE). 
+  This drop breaks down the LWE assumption, how Kyber leverages it, and 
+  why it’s the new standard after RSA and ECC.
+
+sections:
+  - concept: Learning With Errors (LWE)
+    definition: >
+      Given a set of linear equations with a small amount of noise injected, 
+      recover the original secret vector. The noise makes solving exponentially hard.
+    core_equation: A·s + e = b
+    intuition: >
+      It's like solving Ax = b, except each 'b' is distorted — and you 
+      don’t know by how much.
+    importance: >
+      LWE is provably hard based on worst-case lattice problems (like 
+      SVP), even against quantum computers.
+
+  - concept: Module-LWE
+    definition: >
+      A structured variant of LWE used in Kyber, balancing efficiency 
+      and security.
+    tradeoff: >
+      Smaller keys and ciphertexts with structured algebra for real-
+      world practicality.
+
+  - scheme: Kyber
+    type: Key Encapsulation Mechanism (KEM)
+    based_on: Module-LWE
+    status: NIST PQC Standard (Encryption)
+    versions:
+      - Kyber512: Baseline security, compact
+      - Kyber768: Recommended security (NIST Level 3)
+      - Kyber1024: High-security (NIST Level 5)
+    features:
+      - IND-CCA2 secure (Chosen ciphertext attack resistant)
+      - Stateless encapsulation
+      - Highly efficient on constrained devices
+
+  - comparison:
+      rsa: >
+        Relies on integer factorization. Broken by Shor’s algorithm. 
+        Long keys. Slower.
+      ecc: >
+        Relies on elliptic curve discrete logs. Also broken by quantum. 
+        Compact but vulnerable.
+      kyber: >
+        Lattice-based. Quantum-safe. Balanced size and speed. Chosen 
+        for future standards.
+
+  - use_cases:
+      - TLS encryption in post-quantum networks
+      - VPN key exchanges
+      - IoT devices with low overhead
+      - Hybrid cryptography with classical+PQC fallback
+
+resources:
+  - title: NIST Final PQC Selections
+    url: https://csrc.nist.gov/news/2022/pqc-candidates-to-be-standardized
+
+  - title: IBM's CRYSTALS-Kyber Project
+    url: https://research.ibm.com/blog/quantum-safe-cryptography
+
+  - title: Kyber Specification (Official)
+    url: https://pq-crystals.org/kyber/data/kyber-specification.pdf
+
+  - title: Post-Quantum TLS with Kyber (Cloudflare)
+    url: https://blog.cloudflare.com/post-quantum-tls/
