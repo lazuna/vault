@@ -1,0 +1,40 @@
+topic: <TOPIC_NAME>
+version: 1.0
+status: draft
+maintainer: ragverus
+last_updated: <YYYY-MM-DD>
+
+why_it_matters:
+  - <Brief description of the strategic or operational importance>
+  - <List the risk, opportunity, or relevance to the CISO role>
+  - <Describe the current industry/state-of-practice shortcomings>
+  - <Your POV on why this should exist in your Vault>
+
+objectives:
+  - <List 3–5 clear goals for this topic’s module>
+  - <Can include: educate, automate, detect, document, migrate>
+  - <Mention tooling, standards, frameworks if relevant>
+
+target_audience:
+  - <Who will benefit from this module?>
+  - Examples: analysts, CISO-track engineers, red teamers, governance leads
+
+cycle_plan:
+  basics:
+    - <Add related files in 02_basics/ when created>
+  detections:
+    - <List YAMLs from 03_detections/>
+  mappings:
+    - <List mapping YAMLs (MITRE, NIST, CIS)>
+  response:
+    - <Playbooks, scenarios, incident flows>
+  automation:
+    - <Tools, scripts, dashboards, automation-ready content>
+  outputs:
+    - <Final drops, PDFs, YAML exports>
+
+tags:
+  - #next
+  - #<insert tags like #crypto, #detection, #governance>
+  - #ciso-track
+
