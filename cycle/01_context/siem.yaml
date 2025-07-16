@@ -1,0 +1,51 @@
+topic: SIEM (Security Information and Event Management)
+version: 1.0
+status: active
+maintainer: ragverus
+last_updated: 2025-07-16
+
+why_it_matters:
+  - SIEM platforms are the operational backbone of enterprise security, integrating log aggregation, correlation, and real-time detection.
+  - Despite wide adoption, many SIEMs fail due to misconfigured use cases, lack of contextual enrichment, and alert fatigue.
+  - Strategic SIEM implementation allows organizations to evolve from passive logging to active detection and response capability.
+  - A CISO candidate must demonstrate the ability to define, design, and scale detection logic within business-aligned contexts.
+
+objectives:
+  - Create modular YAML-based detection logic across categories (e.g., access, insider threat, cloud).
+  - Align use cases to frameworks like MITRE ATT&CK, NIST CSF, and CIS Controls.
+  - Automate detection lifecycle using rulesets, dashboards, and AI-parsable outputs.
+  - Deliver executive-ready reports, detection indexes, and visualization layers.
+
+target_audience:
+  - CISO-track engineers
+  - SOC leads and detection engineers
+  - Threat hunters and purple teams
+  - Enterprise security architects
+
+cycle_plan:
+  basics:
+    - siem_principles.yaml
+  detections:
+    - access_management.yaml
+    - threat_detection.yaml
+    - insider_threat.yaml
+  mappings:
+    - mitre_mapping.yaml
+    - cis_controls.yaml
+    - compliance_rules.yaml
+  response:
+    - siem_incident_response.yaml
+  automation:
+    - detection_index.yaml
+    - dashboard.py
+  outputs:
+    - siem-v1.0.yaml
+    - siem_report.pdf
+
+tags:
+  - #next
+  - #flow
+  - #log-analysis
+  - #threat-detection
+  - #ciso-track
+

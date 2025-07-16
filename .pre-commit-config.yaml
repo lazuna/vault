@@ -11,3 +11,10 @@ repos:
       - id: flake8
         args: ["--max-line-length=120"]
 
+  - repo: local
+    hooks:
+      - id: update-index
+        name: Auto Update _index.yaml for Phases
+        entry: python3 tools/update_phase_index.py
+        language: system
+        files: ^cycle/

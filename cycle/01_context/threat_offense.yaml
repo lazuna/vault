@@ -1,0 +1,52 @@
+topic: Threat Offense
+version: 1.0
+status: in_progress
+maintainer: ragverus
+last_updated: 2025-07-16
+
+why_it_matters:
+  - Offensive security provides critical insights into adversary behavior, misconfigurations, and real-world impact.
+  - Without understanding threat actor TTPs, defensive controls become theoretical and disconnected from actual risk.
+  - CISO-level strategy must include red teaming awareness and offensive-informed detection design.
+  - Mapping and simulating threats proactively allows for risk-driven security posture optimization.
+
+objectives:
+  - Catalog tooling and methodologies used for offensive recon, exploitation, and post-exploitation.
+  - Highlight detection blind spots revealed through simulated attacks.
+  - Build threat-informed use cases that feed into detection engineering and blue team playbooks.
+  - Create a reference for offensive capability maturity in modern security programs.
+
+target_audience:
+  - Red teamers and penetration testers
+  - Detection engineers and threat hunters
+  - Purple teams bridging attack and defense
+  - CISOs using offensive data to justify prioritization
+
+cycle_plan:
+  basics:
+    - threat_offense_basics.yaml
+  detections:
+    - enumeration_tools.yaml
+    - exploitation_basics.yaml
+    - phishing_techniques.yaml
+    - sql_injection_tools.yaml
+    - xss_tools.yaml
+    - malware_analysis.yaml
+  mappings:
+    - mitre_mapping.yaml
+  response:
+    - adversary_sim_playbook.yaml
+  automation:
+    - attack_chain_simulator.py
+  outputs:
+    - threat_offense-v1.0.yaml
+    - threat_offense_drop.pdf
+
+tags:
+  - #next
+  - #offense
+  - #redteam
+  - #purple
+  - #recon
+  - #ciso-track
+

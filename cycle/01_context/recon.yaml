@@ -1,0 +1,47 @@
+topic: Reconnaissance
+version: 1.0
+status: in_progress
+maintainer: ragverus
+last_updated: 2025-07-16
+
+why_it_matters:
+  - Recon is the foundation of offensive security, yet it’s underdeveloped in most detection programs.
+  - Without recon awareness, organizations cannot understand how they are being fingerprinted or profiled.
+  - External attack surface mapping is vital for red, blue, and purple teams — and a core CISO concern.
+  - A mature recon program improves adversary attribution, threat anticipation, and zero-day discovery.
+
+objectives:
+  - Document enumeration techniques, scanning tactics, and passive recon methods.
+  - Build detection logic that identifies adversarial recon before exploitation.
+  - Create asset fingerprinting playbooks and tools for blue teams.
+  - Deliver a recon automation dashboard and mapping layer for threat analysts.
+
+target_audience:
+  - Red/purple teams and adversarial simulation groups
+  - Blue teams and SOC analysts focused on early signal detection
+  - CISOs building visibility across unknown attack surfaces
+
+cycle_plan:
+  basics:
+    - recon_essentials.yaml
+  detections:
+    - recon_tools.yaml
+    - enumeration_tools.yaml
+  mappings:
+    - mitre_mapping.yaml
+  response:
+    - recon_response_playbook.yaml
+  automation:
+    - recon_chain.py
+    - recon_dashboard.py
+  outputs:
+    - recon-v1.0.yaml
+    - recon_report.pdf
+
+tags:
+  - #next
+  - #flow
+  - #threat_offense
+  - #recon
+  - #ciso-track
+

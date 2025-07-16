@@ -1,0 +1,50 @@
+topic: Post-Quantum Cryptography (PQC)
+version: 1.0
+status: in_progress
+maintainer: ragverus
+last_updated: 2025-07-16
+
+why_it_matters:
+  - Post-quantum threats are inevitable — quantum computers will break RSA and ECC within the next decade.
+  - NIST has finalized its first set of post-quantum standards, accelerating the need for cryptographic agility.
+  - Most organizations are unprepared for crypto migration, and CISO leaders must begin planning now.
+  - Understanding PQC is no longer theoretical — it is operational risk and future-proofing strategy.
+
+objectives:
+  - Explain foundational lattice-based crypto concepts using CISO-friendly abstractions.
+  - Build a comparative map of PQC schemes (e.g., Kyber, Dilithium) with real-world tradeoffs.
+  - Provide playbooks for PQC migration across legacy enterprise architecture.
+  - Prepare YAML and vector-based outputs suitable for AI security agents or policy generators.
+
+target_audience:
+  - CISO candidates focused on crypto strategy
+  - Cryptographic engineers
+  - CISOs and risk managers planning long-term transformation
+  - Educators building next-generation crypto curricula
+
+cycle_plan:
+  basics:
+    - pqc_basics.yaml
+    - lattice_hardness.yaml
+  detections:
+    - lwe_kyber.yaml
+    - signature_schemes.yaml
+  mappings:
+    - nist_csf.yaml
+    - pqc_attack_map.yaml
+  response:
+    - pqc_migration.yaml
+  automation:
+    - pqc_tools.py
+    - vector_primer.yaml
+  outputs:
+    - pqc-v1.0.yaml
+    - pqc_migration.pdf
+
+tags:
+  - #next
+  - #quantum
+  - #encryption
+  - #ciso-track
+  - #crypto-migration
+
