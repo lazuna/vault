@@ -1,60 +1,24 @@
-# === Python ===
+# Byte-compiled / cache files
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
-*.env
-.venv/
-.env
-.env.*
-
-# === JavaScript / Node / TypeScript ===
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-dist/
-build/
-
-# === Go ===
-*.exe
-*.test
-*.out
-
-# === Bash ===
-*.swp
-*.swo
-
-# === C/C++ (Clang) ===
-*.o
-*.obj
 *.so
-*.dll
-*.exe
-*.out
-*.a
 
-# === Editor/IDE Junk ===
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
+# Python environment
+.env
+.venv
+env/
+venv/
+
+# OS files
 .DS_Store
-*.bak
-*.tmp
-*.log
-
-# === OS Files ===
 Thumbs.db
-ehthumbs.db
-Desktop.ini
 
-# === Archive Files ===
-*.zip
-*.tar.gz
-*.tar
-*.rar
+# IDEs
+.idea/
+.vscode/
 
-# === Vault Output ===
-vault-foundation.zip
+# Coverage/testing
+*.coverage
+htmlcov/
+.tox/
 
