@@ -1,66 +1,62 @@
-# 🧠 Vault
-<p align="left">
-  <img alt="Updated Weekly" src="https://img.shields.io/badge/updated-weekly-brightgreen">
-  <img alt="Maintainer Mode" src="https://img.shields.io/badge/contributors-closed-lightgrey">
-  <img alt="CI" src="https://github.com/lazuna/vault/actions/workflows/ci.yml/badge.svg">
-  <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue">
-</p>
+**VAULT**  
+Structured Knowledge. Operational Detection. CISO Track.
 
-**Vault** is a structured system of cybersecurity knowledge, detection logic, operational design, and professional growth — built for long-term mastery, not short-term likes.
+Vault is not a blog. Not a dump.  
+It is a versioned system for cybersecurity mastery — layered, mapped, and updated every Tuesday.
 
-It’s not a blog. Not a dump.  
-It’s versioned, curated, and evolves every Tuesday.
+No distractions. No trends. Just the work.
 
----
+----
 
-## 📁 Structure
+**Structure**
 
-- `knowledge/` — Threat modeling, detection chains, recon methods, cloud security, and compliance layers.
-- `projects/` — Real-world code, pipelines, and recon labs.
-- `growth/` — CISO-track progress maps, communication, and leadership development.
-- `meta/` — Architecture, changelogs, policy intent, contribution stance.
+- `cycle/01_prepare/` — Governance, risk frameworks, compliance maps.
+- `cycle/02_surface/` — Asset inventory, attack surface, coverage matrices.
+- `cycle/03_detections/` — Detection engineering, adversary emulation, scan logic.
+- `cycle/04_soft_skills/` — CISO-track growth: communication, leadership, trust-building.
+- `cycle/05_delivery/` — Storytelling, synthesis, delivery formats for SLT and technical audiences.
 
----
+Other modules:
+- `_index.yaml` — Canonical map of tracked files across cycles.
+- `CHANGELOG.md` — Weekly changes and operational evolution.
+- `.github/` — CI setup, vault design stance, and policies.
 
-## 🔁 Update Cadence
+----
 
-**Drops every Tuesday.**  
-Each release expands Vault’s operational surface — one layer at a time.
+**Update Cadence**
 
----
+New layers drop **every Tuesday** — structured, documented, and scoped.
 
-## 🚀 Current Drop: *Threat Intelligence, Operationalized*
+Tracked in: `meta/drop-history.yaml`
 
-Explore:
+----
+
+**Current Focus: Threat Intelligence, Operationalized**
+
+Includes:
 - Tools: `dnsrecon`, `fierce`, `dnsenum`
-- Files: `knowledge/operational/threat_offense/recon_tools.yaml`
+- File: `cycle/03_detections/pqc/threat_offense/recon_tools.yaml`
 
-Track progress in `meta/drop-history.yaml`
+----
 
----
+**License**
 
-## ⚖️ License
+- Code and templates: MIT License (`LICENSE`)
+- Notes and documentation: CC BY-NC 4.0  
+  Commercial use prohibited without permission. Attribution required.
 
-- **Code and Templates**: MIT License (`LICENSE`)
-- **Documentation and Notes**: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+----
 
-> Attribution required. Commercial use of notes is prohibited without written permission.
+**Contributions**
 
----
+This is a single-maintainer vault.  
+Pull requests are disabled to maintain authorship clarity and design integrity.  
+For feedback or ideas, open an issue.
 
-## ❌ Contributions
+----
 
-Vault is a single-maintainer system.  
-Pull requests are disabled to preserve clarity of authorship and vision.  
-Feedback or ideas? Open an issue.
+**Purpose**
 
----
-
-## 🧭 Purpose
-
-This repository exists as a signal — for those who think in systems, detect in depth, and build with clarity.  
-It is for practitioners, not spectators.  
-It is for the future CISO.
-
----
+This vault exists as a signal — for those who think in systems, detect in depth, and build clearly.  
+It is for practitioners. For architects. For the future CISO.
 
