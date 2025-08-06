@@ -1,3 +1,0 @@
-[submodule "cycle/03_detections/pqc"]
-	path = cycle/03_detections/pqc
-	url = https://github.com/lazuna/vault-pqc
